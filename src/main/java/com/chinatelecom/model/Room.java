@@ -71,5 +71,11 @@ public class Room {
 	public void setCOMMENTS(String cOMMENTS) {
 		COMMENTS = cOMMENTS;
 	}
+	@Override
+	public String toString() {
+		return "Room [ID=" + ID + ", SITEID=" + SITEID + ", NAME=" + NAME + ", ROOMNUM=" + ROOMNUM + ", AREA=" + AREA
+				+ ", MAXRACKNUM=" + MAXRACKNUM + ", USEDRACKNUM=" + USEDRACKNUM + ", FREERACKNUM=" + FREERACKNUM
+				+ ", USEFOR=" + USEFOR + ", COMMENTS=" + COMMENTS + "]";
+	}
 
 }

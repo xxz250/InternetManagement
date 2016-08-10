@@ -3,14 +3,19 @@ package com.chinatelecom.dao;
 import java.util.List;
 
 import com.chinatelecom.dao.mapper.EquipmentMapper;
+import com.chinatelecom.model.Equipment;
+import com.chinatelecom.model.Rack;
+import com.chinatelecom.model.Room;
 import com.chinatelecom.model.Site;
+import com.chinatelecom.model.Vendor;
+
 
 public class equipmentDao {
 	public EquipmentMapper mapper;
-	public List<Site> getSiteInfoBySiteID(int SiteID){
+	public Site getSiteInfoBySiteID(int SiteID){
 		/*int ID = mapper.getID(SiteNanme);
 		return mapper.getSiteInfoBySiteID(ID);*/
-		List<Site> siteinfo=mapper.getSiteInfoBySiteID(SiteID);
+		Site siteinfo=mapper.getSiteInfoBySiteID(SiteID);
 		if(siteinfo==null){
 			return null;
 		}
@@ -29,8 +34,8 @@ public class equipmentDao {
 		}
 	}
 	
-	public String getRoomInfoByRoomID(int RoomID) {
-		String roominfo=mapper.getRoomInfoByRoomID(RoomID);
+	public Room getRoomInfoByRoomID(int RoomID) {
+		Room roominfo=mapper.getRoomInfoByRoomID(RoomID);
 		if(roominfo==null){
 			return null;
 		}
@@ -47,8 +52,8 @@ public class equipmentDao {
 		return racksequence;
 	}
 	
-	public String getRackInfoByRackID(int RackID){
-		String rackinfo=mapper.getRackInfoByRackID(RackID);
+	public Rack getRackInfoByRackID(int RackID){
+		Rack rackinfo=mapper.getRackInfoByRackID(RackID);
 		if(rackinfo==null){
 			return null;
 		}
@@ -57,9 +62,9 @@ public class equipmentDao {
 		}
 	}
 	
-	public List<String> getVendorInfoByVectorID(int VectorID){
-		List<String> vendorinfo=mapper.getVendorInfoByVectorID(VectorID);
-		if(vendorinfo.isEmpty()){
+	public Vendor getVendorInfoByVendorID(int VendorID){
+		Vendor vendorinfo=mapper.getVendorInfoByVendorID(VendorID);
+		if(vendorinfo==null){
 			return null;
 		}
 		else {
@@ -69,8 +74,8 @@ public class equipmentDao {
 	
 	public int getEquipTypeByVendorID(int VectorID){
 		int type=mapper.getEquipTypeByVendorID(VectorID);
-		if(type>0){
-			return 0;
+		if(type<0){
+			return -1;
 		}
 		else{
 			return type;
@@ -103,9 +108,9 @@ public class equipmentDao {
 			return equipname;
 		}
 	}
-	public List<String> getEquipInfoByEquipID(int EquipID){
-		List<String> equipinfo = mapper.getEquipInfoByEquipID(EquipID);
-		if(equipinfo.isEmpty()){
+	public Equipment getEquipInfoByEquipID(int EquipID){
+		Equipment equipinfo = mapper.getEquipInfoByEquipID(EquipID);
+		if(equipinfo==null){
 			return null;
 		}
 		else{

@@ -3,18 +3,72 @@
 <mapper namespace="com.chinatelecom.dao.mapper.EquipmentMapper">
 	<resultMap type="com.chinatelecom.model.Site" id="BaseSite">
 		<id property="ID" column="ID"/>
-		<result property="SITENAME" column="SITENAME" jdbcType="java.lang.String"/>
+		<result property="SITENAME" column="SITENAME" />
+		<result property="ADDRESS" column="ADDRESS" />
+		<result property="COMMENTS" column="COMMENTS" />
 	</resultMap>
-	<select id="getSiteID" parameterType="java.lang.String" resultType="int">
+	<resultMap type="com.chinatelecom.model.Room" id="BaseRoom">
+		<id property="ID" column="ID"/>
+		<result property="SITEID" column="SITEID" />
+		<result property="NAME" column="NAME" />
+		<result property="ROOMNUM" column="ROOMNUM" />
+		<result property="AREA" column="AREA" />
+		<result property="MAXRACKNUM" column="MAXRACKNUM" />
+		<result property="USEDRACKNUM" column="USEDRACKNUM" />
+		<result property="FREERACKNUM" column="FREERACKNUM" />
+		<result property="USEFOR" column="USEFOR" />
+		<result property="COMMENTS" column="COMMENTS" />
+	</resultMap>
+	<resultMap type="com.chinatelecom.model.Rack" id="BaseRack">
+		<id property="ID" column="ID"/>
+		<result property="ROOMID" column="ROOMID" />
+		<result property="COLUMEID" column="COLUMEID" />
+		<result property="SEQUENCE" column="SEQUENCE" />
+		<result property="HEIGHT" column="HEIGHT" />
+		<result property="LOCATIONX" column="LOCATIONX" />
+		<result property="LOCATIONY" column="LOCATIONY" />
+		<result property="ISINMAINTENCE" column="ISINMAINTENCE" />
+		<result property="ISStandarded" column="ISStandarded" />
+		<result property="COMMENTS" column="COMMENTS" />
+	</resultMap>
+	<resultMap type="com.chinatelecom.model.Vendor" id="BaseVendor">
+		<id property="ID" column="ID"/>
+		<result property="NAME" column="NAME" />
+		<result property="NAMEABB" column="NAMEABB" />
+		<result property="ADDRESS" column="ADDRESS" />
+		<result property="COMMENTS" column="COMMENTS" />
+	</resultMap>
+	<resultMap type="com.chinatelecom.model.Equipment" id="BaseEquipment">
+		<id property="ID" column="ID"/>
+		<result property="RACKID" column="RACKID" />
+		<result property="HOSTNAME" column="HOSTNAME" />
+		<result property="MANAGEMENTIP" column="MANAGEMENTIP" />
+		<result property="HOSTLABEL" column="HOSTLABEL" />
+		<result property="EQUIPMENTTYPE" column="EQUIPMENTTYPE" />
+		<result property="USEFOR" column="USEFOR" />
+		<result property="SYSTEMID" column="SYSTEMID" />
+		<result property="SERIALNO" column="SERIALNO" />
+		<result property="STARTLOCATION" column="STARTLOCATION" />
+		<result property="WORTH" column="WORTH" />
+		<result property="BELONGSTO" column="BELONGSTO" />
+		<result property="MAINTENANCEDATE" column="MAINTENANCEDATE" />
+		<result property="MAINTENANCEDEP" column="MAINTENANCEDEP" />
+		<result property="MAINTENANCEENDDATE" column="MAINTENANCEENDDATE" />
+		<result property="FEUSED" column="FEUSED" />
+		<result property="OPTUSED" column="OPTUSED" />
+		<result property="PARENTEQUIPMENT" column="PARENTEQUIPMENT" />
+		<result property="COMMENTS" column="COMMENTS" />
+	</resultMap>
+	<select id="getSiteID" parameterType="java.lang.String" resultType="Integer">
 		select ID from Site where SITENAME=#{SiteName};
 	</select>
-	<select id="getRoomID" parameterType="java.lang.String" resultType="int">
+	<select id="getRoomID" parameterType="java.lang.String" resultType="Integer">
 		select ID from Room where NAME=#{RoomName};
 	</select>
-	<select id="getRackID" parameterType="java.lang.String" resultType="int">
+	<select id="getRackID" parameterType="java.lang.String" resultType="Integer">
 		select ID from Rack where COLUMEID=#{Columeid};
 	</select>
-	<select id="getEquipmentID" parameterType="java.lang.String" resultType="int">
+	<select id="getEquipmentID" parameterType="java.lang.String" resultType="Integer">
 		select ID from Equipment where HOSTNAME=#{HostName};
 	</select>
 	<select id="getSiteInfoBySiteID" parameterType="int" resultMap="BaseSite">
@@ -23,17 +77,17 @@
 	<select id="getRoomNameBySiteID" parameterType="int" resultType="java.lang.String">
 		select Name from Room where ID=#{SiteID};
 	</select>
-	<select id="getRoomInfoByRoomID" parameterType="int" resultType="java.lang.String">
+	<select id="getRoomInfoByRoomID" parameterType="int" resultMap="BaseRoom">
 		select * from Room where ROOMID=#{ROOMID};
 	</select>
 	<select id="getRackSequenceByRoomID" parameterType="int" resultType="java.lang.String">
 		select SEQUENCE from RACK where ROOMID=#{ROOMID};
 	</select>
-	<select id="getRackInfoByRackID" parameterType="int" resultType="java.lang.String">
+	<select id="getRackInfoByRackID" parameterType="int" resultMap="BaseRack">
 		select * from RACK where ID=#{Rack};
 	</select>
-	<select id="getVendorInfoByVectorID" parameterType="int" resultType="java.lang.String">
-		select * from VENDOR where ID=#{VectorID};
+	<select id="getVendorInfoByVectorID" parameterType="int" resultMap="Vendor">
+		select * from VENDOR where ID=#{VendorID};
 	</select>
 	<select id="getEquipTypeByVendorID" parameterType="int" resultType="java.lang.String">
 		select TYPE from EQUIPMENTTYPE where VENDORID=#{VectorID};
@@ -49,7 +103,7 @@
 		select HOSTLABEL from Equipment 
 		where EQUIPMENTTYPE=(select TYPE from EQUIPMENTTYPE where ID=#{EquipTypeID});
 	</select>
-	<select id="getEquipInfoByEquipID" parameterType="int" resultType="java.lang.String">
+	<select id="getEquipInfoByEquipID" parameterType="int" resultMap="BaseEquipment">
 		select * from Equipment where ID=#{EquipID};
 	</select>
 	<select id="getIpNameByEquipID" parameterType="int" resultType="java.lang.String">

@@ -71,5 +71,11 @@ public class Rack {
 	public void setCOMMENTS(String cOMMENTS) {
 		COMMENTS = cOMMENTS;
 	}
+	@Override
+	public String toString() {
+		return "Rack [ID=" + ID + ", ROOMID=" + ROOMID + ", COLUMEID=" + COLUMEID + ", SEQUENCE=" + SEQUENCE
+				+ ", HEIGHT=" + HEIGHT + ", LOCATIONX=" + LOCATIONX + ", LOCATIONY=" + LOCATIONY + ", ISINMAINTENCE="
+				+ ISINMAINTENCE + ", ISStandarded=" + ISStandarded + ", COMMENTS=" + COMMENTS + "]";
+	}
 	
 }

@@ -36,5 +36,10 @@ public class Vendor {
 	public void setCOMMENTS(String cOMMENTS) {
 		COMMENTS = cOMMENTS;
 	}
+	@Override
+	public String toString() {
+		return "Vendor [ID=" + ID + ", NAME=" + NAME + ", NAMEABB=" + NAMEABB + ", ADDRESS=" + ADDRESS + ", COMMENTS="
+				+ COMMENTS + "]";
+	}
 
 }

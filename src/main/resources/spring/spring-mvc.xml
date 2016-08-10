@@ -39,7 +39,7 @@
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/page/" />
-		<!-- <property name="suffix" value=".html" /> -->
+		<property name="suffix" value=".html" /> 
 	</bean>
 
 	<bean id="multipartResolver"
