@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinatelecom.dao.mapper.EquipmentMapper">
+	<resultMap type="com.chinatelecom.model.Site" id="BaseSite">
+		<id property="ID" column="ID"/>
+		<result property="SITENAME" column="SITENAME" jdbcType="java.lang.String"/>
+	</resultMap>
+	<select id="getSiteID" parameterType="java.lang.String" resultType="int">
+		select ID from Site where SITENAME=#{SiteName};
+	</select>
+	<select id="getRoomID" parameterType="java.lang.String" resultType="int">
+		select ID from Room where NAME=#{RoomName};
+	</select>
+	<select id="getRackID" parameterType="java.lang.String" resultType="int">
+		select ID from Rack where COLUMEID=#{Columeid};
+	</select>
+	<select id="getEquipmentID" parameterType="java.lang.String" resultType="int">
+		select ID from Equipment where HOSTNAME=#{HostName};
+	</select>
+	<select id="getSiteInfoBySiteID" parameterType="int" resultMap="BaseSite">
+		select * from Site where ID=#{SiteID};
+	</select>
+	<select id="getRoomNameBySiteID" parameterType="int" resultType="java.lang.String">
+		select Name from Room where ID=#{SiteID};
+	</select>
+	<select id="getRoomInfoByRoomID" parameterType="int" resultType="java.lang.String">
+		select * from Room where ROOMID=#{ROOMID};
+	</select>
+	<select id="getRackSequenceByRoomID" parameterType="int" resultType="java.lang.String">
+		select SEQUENCE from RACK where ROOMID=#{ROOMID};
+	</select>
+	<select id="getRackInfoByRackID" parameterType="int" resultType="java.lang.String">
+		select * from RACK where ID=#{Rack};
+	</select>
+	<select id="getVendorInfoByVectorID" parameterType="int" resultType="java.lang.String">
+		select * from VENDOR where ID=#{VectorID};
+	</select>
+	<select id="getEquipTypeByVendorID" parameterType="int" resultType="java.lang.String">
+		select TYPE from EQUIPMENTTYPE where VENDORID=#{VectorID};
+	</select>
+	<select id="getEquipNameByRoomID" parameterType="int" resultType="java.lang.String">
+		select HOSTLABEL from EQUIPMENT
+		where RACKID IN (select ID from Rack where ROOMID=#{RoomID});
+	</select>
+	<select id="getEquipNameByRackID" parameterType="int" resultType="java.lang.String">
+		select HOSTLABEL from EQUIPMENT where RACKID=#{RackID};
+	</select>
+	<select id="getEquipNameByEquipTypeID" parameterType="int" resultType="java.lang.String">
+		select HOSTLABEL from Equipment 
+		where EQUIPMENTTYPE=(select TYPE from EQUIPMENTTYPE where ID=#{EquipTypeID});
+	</select>
+	<select id="getEquipInfoByEquipID" parameterType="int" resultType="java.lang.String">
+		select * from Equipment where ID=#{EquipID};
+	</select>
+	<select id="getIpNameByEquipID" parameterType="int" resultType="java.lang.String">
+		select IP from EQUIPMENT_IPADDRESS,IP where EQUIPMENT_IPADDRESS.IPADDRESSID=IP.ID and EQUIPMENTID=#{EquipID} ;
+	</select>
+</mapper>
