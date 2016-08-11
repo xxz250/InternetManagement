@@ -2,21 +2,22 @@ package com.chinatelecom.webservice;
 
 import java.util.List;
 
-import com.chinatelecom.dao.equipmentDao;
-import com.chinatelecom.model.Equipment;
-import com.chinatelecom.model.Rack;
-import com.chinatelecom.model.Room;
-import com.chinatelecom.model.Site;
-import com.chinatelecom.model.Vendor;
+import org.springframework.beans.factory.annotation.Autowired;
 
-public class webserviceimpl {
+import com.chinatelecom.dao.equipmentDao;
+import com.chinatelecom.model.Site;
+import com.chinatelecom.service.webservice;
+
+public class webserviceimpl implements webservice{
 	
+    @Autowired
     private equipmentDao getEquipInfo;
     
-    public Site getSiteInfoBySiteID(int SiteID){
+    @Override
+    public List<Site> getSiteInfoBySiteID(int SiteID){
         return getEquipInfo.getSiteInfoBySiteID(SiteID);
     }
-    public List<String> getRoomNameBySiteID(int SiteID){
+   /* public List<String> getRoomNameBySiteID(int SiteID){
         return getEquipInfo.getRoomNameBySiteID(SiteID);
     }   
     public Room getRoomInfoByRoomID(int RoomID) {
@@ -48,6 +49,6 @@ public class webserviceimpl {
     }
     public List<String> getIpNameByEquipID(int EquipID){
         return getEquipInfo.getIpNameByEquipID(EquipID);
-    }
+    }*/
 }
 

@@ -10,7 +10,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
-		<jdk.version>1.8</jdk.version>
+		<jdk.version>1.7</jdk.version>
 		<spring.version>4.0.3.RELEASE</spring.version>
 	</properties>
 	<dependencies>
@@ -217,6 +217,11 @@
 			<version>1.6.1</version>
 		</dependency>
 		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.25</version>
+		</dependency>
+		<dependency>
 			<groupId>com.google.code.gson</groupId>
 			<artifactId>gson</artifactId>
 			<version>2.2.4</version>
@@ -269,7 +274,7 @@
             	<artifactId>maven-install-plugin</artifactId>  
             	<version>2.3.1</version>  
         	</plugin>  
-        	<plugin>  
+        	<!-- <plugin>  
         		<groupId>org.apache.maven.plugins</groupId>      	
 				<artifactId>maven-surefire-plugin</artifactId>      	
 				<version>2.12</version>
@@ -280,7 +285,7 @@
 	        			<version>2.12</version>
 	      				</dependency>
 	    		</dependencies>		    
-			</plugin>  
+			</plugin>  --> 
         	<plugin>  
             	<!-- 源码插件 -->  
             	<groupId>org.apache.maven.plugins</groupId>  

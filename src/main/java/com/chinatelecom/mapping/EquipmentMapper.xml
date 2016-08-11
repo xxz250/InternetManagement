@@ -7,7 +7,7 @@
 		<result property="ADDRESS" column="ADDRESS" />
 		<result property="COMMENTS" column="COMMENTS" />
 	</resultMap>
-	<resultMap type="com.chinatelecom.model.Room" id="BaseRoom">
+	<!-- <resultMap type="com.chinatelecom.model.Room" id="BaseRoom">
 		<id property="ID" column="ID"/>
 		<result property="SITEID" column="SITEID" />
 		<result property="NAME" column="NAME" />
@@ -58,8 +58,8 @@
 		<result property="OPTUSED" column="OPTUSED" />
 		<result property="PARENTEQUIPMENT" column="PARENTEQUIPMENT" />
 		<result property="COMMENTS" column="COMMENTS" />
-	</resultMap>
-	<select id="getSiteID" parameterType="java.lang.String" resultType="Integer">
+	</resultMap> -->
+	<!-- <select id="getSiteID" parameterType="java.lang.String" resultType="Integer">
 		select ID from Site where SITENAME=#{SiteName};
 	</select>
 	<select id="getRoomID" parameterType="java.lang.String" resultType="Integer">
@@ -70,11 +70,11 @@
 	</select>
 	<select id="getEquipmentID" parameterType="java.lang.String" resultType="Integer">
 		select ID from Equipment where HOSTNAME=#{HostName};
-	</select>
+	</select> -->
 	<select id="getSiteInfoBySiteID" parameterType="int" resultMap="BaseSite">
 		select * from Site where ID=#{SiteID};
 	</select>
-	<select id="getRoomNameBySiteID" parameterType="int" resultType="java.lang.String">
+	<!-- <select id="getRoomNameBySiteID" parameterType="int" resultType="java.lang.String">
 		select Name from Room where ID=#{SiteID};
 	</select>
 	<select id="getRoomInfoByRoomID" parameterType="int" resultMap="BaseRoom">
@@ -108,5 +108,5 @@
 	</select>
 	<select id="getIpNameByEquipID" parameterType="int" resultType="java.lang.String">
 		select IP from EQUIPMENT_IPADDRESS,IP where EQUIPMENT_IPADDRESS.IPADDRESSID=IP.ID and EQUIPMENTID=#{EquipID} ;
-	</select>
+	</select> -->
 </mapper>
