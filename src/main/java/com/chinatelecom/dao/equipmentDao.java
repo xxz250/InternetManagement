@@ -72,8 +72,8 @@ public class equipmentDao {
 		}
 	}
 	
-	public int getEquipTypeByVendorID(int VectorID){
-		int type=mapper.getEquipTypeByVendorID(VectorID);
+	public int getEquipTypeByVendorID(int VendorID){
+		int type=mapper.getEquipTypeByVendorID(VendorID);
 		if(type<0){
 			return -1;
 		}

@@ -90,7 +90,7 @@
 		select * from VENDOR where ID=#{VendorID};
 	</select>
 	<select id="getEquipTypeByVendorID" parameterType="int" resultType="java.lang.String">
-		select TYPE from EQUIPMENTTYPE where VENDORID=#{VectorID};
+		select TYPE from EQUIPMENTTYPE where VENDORID=#{VendorID};
 	</select>
 	<select id="getEquipNameByRoomID" parameterType="int" resultType="java.lang.String">
 		select HOSTLABEL from EQUIPMENT
