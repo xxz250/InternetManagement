@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 
 import com.chinatelecom.dao.mapper.EquipmentMapper;
 import com.chinatelecom.model.Equipment;
+import com.chinatelecom.model.EquipmentType;
 import com.chinatelecom.model.Rack;
 import com.chinatelecom.model.Room;
 import com.chinatelecom.model.Site;
@@ -17,50 +18,28 @@ public class equipmentDao {
     @Autowired
     public EquipmentMapper mapper;
 
-    public List<Site> getSiteInfoBySiteID(int SiteID) {
-        /*
-         * int ID = mapper.getID(SiteNanme); return
-         * mapper.getSiteInfoBySiteID(ID);
-         */
-        return mapper.getSiteInfoBySiteID(SiteID);
+    public List<Site> getAllSite(){
+    	return mapper.getAllSite();
     }
-
-    /*
-     * public List<String> getRoomNameBySiteID(int SiteID){ List<String>
-     * roomname=mapper.getRoomNameBySiteID(SiteID); if(roomname.isEmpty()){
-     * return null; } else{ return roomname; } }
-     * 
-     * public Room getRoomInfoByRoomID(int RoomID) { Room
-     * roominfo=mapper.getRoomInfoByRoomID(RoomID); if(roominfo==null){ return
-     * null; } else{ return roominfo; } }
-     * 
-     * public List<String> getRackSequenceByRoomID(int RoomID){ List<String>
-     * racksequence=mapper.getRackSequenceByRoomID(RoomID);
-     * if(racksequence.isEmpty()){ return null; } return racksequence; }
-     * 
-     * public Rack getRackInfoByRackID(int RackID){ Rack
-     * rackinfo=mapper.getRackInfoByRackID(RackID); if(rackinfo==null){ return
-     * null; } else{ return rackinfo; } }
-     * 
-     * public Vendor getVendorInfoByVendorID(int VendorID){ Vendor
-     * vendorinfo=mapper.getVendorInfoByVendorID(VendorID);
-     * if(vendorinfo==null){ return null; } else { return vendorinfo; } }
-     * 
-     * public int getEquipTypeByVendorID(int VendorID){ int
-     * type=mapper.getEquipTypeByVendorID(VendorID); if(type<0){ return -1; }
-     * else{ return type; } } public List<String> getEquipNameByRoomID(int
-     * RoomID){ List<String> equipname = mapper.getEquipNameByRoomID(RoomID);
-     * if(equipname.isEmpty()){ return null; } else{ return equipname; } }
-     * public List<String> getEquipNameByRackID(int RackID){ List<String>
-     * equipname = mapper.getEquipNameByRackID(RackID); if(equipname.isEmpty()){
-     * return null; } else{ return equipname; } } public List<String>
-     * getEquipNameByEquipTypeID(int EquipTypeID){ List<String> equipname =
-     * mapper.getEquipNameByEquipTypeID(EquipTypeID); if(equipname.isEmpty()){
-     * return null; } else{ return equipname; } } public Equipment
-     * getEquipInfoByEquipID(int EquipID){ Equipment equipinfo =
-     * mapper.getEquipInfoByEquipID(EquipID); if(equipinfo==null){ return null;
-     * } else{ return equipinfo; } } public List<String> getIpNameByEquipID(int
-     * EquipID){ List<String> ipname = mapper.getIpNameByEquipID(EquipID);
-     * if(ipname.isEmpty()){ return null; } else{ return ipname; } }
-     */
+	public List<Room> getAllRoomBySite(int SiteID){
+		return mapper.getAllRoomBySite(SiteID);
+	}
+	public List<Rack> getAllRackByRoom(int RoomID){
+		return mapper.getAllRackByRoom(RoomID);
+	}
+	public List<Equipment> getAllEqulpmentByRack(int RackID){
+		return mapper.getAllEqulpmentByRack(RackID);
+	}
+	public List<Vendor> getAllVendor(){
+		return mapper.getAllVendor();
+	}
+	public List<EquipmentType> getAllEquipmentType(){
+		return mapper.getAllEquipmentType();
+	}  
+	public List<EquipmentType> getAllTypeByVendorID(int Vendor){
+		return mapper.getAllTypeByVendorID(Vendor);
+	}
+	public List<Equipment> getAllEquipmentByType(int Type){
+		return mapper.getAllEquipmentByType(Type);
+	}
 }

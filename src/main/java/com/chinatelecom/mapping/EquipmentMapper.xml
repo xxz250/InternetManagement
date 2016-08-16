@@ -7,7 +7,7 @@
 		<result property="ADDRESS" column="ADDRESS" />
 		<result property="COMMENTS" column="COMMENTS" />
 	</resultMap>
-	<!-- <resultMap type="com.chinatelecom.model.Room" id="BaseRoom">
+	<resultMap type="com.chinatelecom.model.Room" id="BaseRoom">
 		<id property="ID" column="ID"/>
 		<result property="SITEID" column="SITEID" />
 		<result property="NAME" column="NAME" />
@@ -58,55 +58,61 @@
 		<result property="OPTUSED" column="OPTUSED" />
 		<result property="PARENTEQUIPMENT" column="PARENTEQUIPMENT" />
 		<result property="COMMENTS" column="COMMENTS" />
-	</resultMap> -->
-	<!-- <select id="getSiteID" parameterType="java.lang.String" resultType="Integer">
-		select ID from Site where SITENAME=#{SiteName};
+	</resultMap> 
+	<resultMap type="com.chinatelecom.model.EquipmentType" id="BaseType">
+		<id property="ID" column="ID"/>
+		<result property="VENDORID" column="VENDORID" />
+		<result property="TYPE" column="TYPE" />
+		<result property="MODEL" column="MODEL" />
+		<result property="HEIGHT" column="HEIGHT" />
+		<result property="POWER" column="POWER" />
+		<result property="FETOTAL" column="FETOTAL" />
+		<result property="OPTTOTAL" column="OPTTOTAL" />
+		<result property="WEIGHT" column="WEIGHT" />
+		<result property="COMMENTS" column="COMMENTS" />
+	</resultMap>
+   <select id="getAllSite"  resultMap="BaseSite">
+		select * from Site ;
 	</select>
-	<select id="getRoomID" parameterType="java.lang.String" resultType="Integer">
-		select ID from Room where NAME=#{RoomName};
+	<select id="getAllRoomBySite" parameterType="int" resultMap="BaseRoom">
+		select * from Room
+		where
+		<if test="SiteID != null and SiteID!= ' ' ">
+			SITEID=#{SiteID}
+		</if>	
 	</select>
-	<select id="getRackID" parameterType="java.lang.String" resultType="Integer">
-		select ID from Rack where COLUMEID=#{Columeid};
+	<select id="getAllRackByRoom" parameterType="int" resultMap="BaseRack">
+		select * from Rack
+		where
+		<if test="RoomID != null and RoomID!= ' ' ">
+			ROOMID=#{RoomID}
+		</if>
 	</select>
-	<select id="getEquipmentID" parameterType="java.lang.String" resultType="Integer">
-		select ID from Equipment where HOSTNAME=#{HostName};
-	</select> -->
-	<select id="getSiteInfoBySiteID" parameterType="int" resultMap="BaseSite">
-		select * from Site where ID=#{SiteID};
+    <select id="getAllEqulpmentByRack" parameterType="int" resultMap="BaseEquipment">
+		select * from Equipment 
+		where
+		<if test="RackID != null and RackID!= ' ' ">
+			RACKID=#{RackID}
+		</if>
 	</select>
-	<!-- <select id="getRoomNameBySiteID" parameterType="int" resultType="java.lang.String">
-		select Name from Room where ID=#{SiteID};
+	<select id="getAllVendor"  resultMap="BaseVendor">
+		select * from Vendor
 	</select>
-	<select id="getRoomInfoByRoomID" parameterType="int" resultMap="BaseRoom">
-		select * from Room where ROOMID=#{ROOMID};
+	<select id="getAllEquipmentType"  resultMap="BaseType">
+		select * from EQUIPMENTTYPE
 	</select>
-	<select id="getRackSequenceByRoomID" parameterType="int" resultType="java.lang.String">
-		select SEQUENCE from RACK where ROOMID=#{ROOMID};
+	<select id="getAllEquipmentByType" parameterType="int" resultMap="BaseEquipment">
+		select * from EQUIPMENT
+		where
+		<if test="Type != null and Type!= ' '">
+			EQUIPMENTTYPE={#Type}
+		</if>
 	</select>
-	<select id="getRackInfoByRackID" parameterType="int" resultMap="BaseRack">
-		select * from RACK where ID=#{Rack};
+	<select id="getAllTypeByVendorID" parameterType="int" resultMap="BaseType">
+		select * from EQUIPMENTTYPE
+		where
+		<if test="VendorID != null and VendorID!= ' ' ">
+			VENDORID={#VendorID}
+		</if>
 	</select>
-	<select id="getVendorInfoByVectorID" parameterType="int" resultMap="Vendor">
-		select * from VENDOR where ID=#{VendorID};
-	</select>
-	<select id="getEquipTypeByVendorID" parameterType="int" resultType="java.lang.String">
-		select TYPE from EQUIPMENTTYPE where VENDORID=#{VendorID};
-	</select>
-	<select id="getEquipNameByRoomID" parameterType="int" resultType="java.lang.String">
-		select HOSTLABEL from EQUIPMENT
-		where RACKID IN (select ID from Rack where ROOMID=#{RoomID});
-	</select>
-	<select id="getEquipNameByRackID" parameterType="int" resultType="java.lang.String">
-		select HOSTLABEL from EQUIPMENT where RACKID=#{RackID};
-	</select>
-	<select id="getEquipNameByEquipTypeID" parameterType="int" resultType="java.lang.String">
-		select HOSTLABEL from Equipment 
-		where EQUIPMENTTYPE=(select TYPE from EQUIPMENTTYPE where ID=#{EquipTypeID});
-	</select>
-	<select id="getEquipInfoByEquipID" parameterType="int" resultMap="BaseEquipment">
-		select * from Equipment where ID=#{EquipID};
-	</select>
-	<select id="getIpNameByEquipID" parameterType="int" resultType="java.lang.String">
-		select IP from EQUIPMENT_IPADDRESS,IP where EQUIPMENT_IPADDRESS.IPADDRESSID=IP.ID and EQUIPMENTID=#{EquipID} ;
-	</select> -->
 </mapper>
