@@ -72,7 +72,7 @@ public class equipserviceimpl implements equipservice{
 		List<Equipment> equip=new ArrayList<Equipment>();
 		List<EquipmentType> typeList=getEquipInfo.getAllTypeByVendorID(VendorID);
 		for(EquipmentType equipmenttype:typeList){
-			List<Equipment> equipmentList=getEquipInfo.getAllEquipmentByType(equipmenttype.getTYPE());
+			List<Equipment> equipmentList=getEquipInfo.getAllEquipmentByType(equipmenttype.getID());
 			equip.addAll(equipmentList);
 		}
 		return equip;

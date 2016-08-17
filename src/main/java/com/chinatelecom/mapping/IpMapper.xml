@@ -1,76 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chinatelecom.dao.mapper.IpMapper">
-	<!-- <resultMap type="com.chinatelecom.model.ResPool" id="BasePool">
-		<id property="ID" column="ID"/>
-		<result property="NAME" column="NAME" />
-		<result property="ADDRESS" column="ADDRESS" />
-		<result property="SITEID" column="SITEID" />
-		<result property="POSTALCODE" column="POSTALCODE" />
+	<resultMap type="com.chinatelecom.model.ResPool" id="BasePool">
+		<id property="ID" column="F00"/>
+		<result property="NAME" column="F01" />
+		<result property="ADDRESS" column="F02" />
+		<result property="POSTALCODE" column="F03" />
+		<result property="SITEID" column="F04" />	
 	</resultMap>
 	<resultMap type="com.chinatelecom.model.Area" id="BaseArea">
-		<id property="ID" column="ID"/>
-		<result property="PESPOOLID" column="PESPOOLID" />
-		<result property="NAME" column="NAME" />
-		<result property="RARENTAREAID" column="RARENTAREAID" />
-		<result property="USEFOR" column="USEFOR" />
-		<result property="TYPE" column="TYPE" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>		
+		<result property="NAME" column="F01" />
+		<result property="TYPE" column="F02" />
+		<result property="PESPOOLID" column="F03" />
+		<result property="RARENTAREAID" column="F04" />
+		<result property="USEFOR" column="F05" />	
+		<result property="COMMENTS" column="F06" />
 	</resultMap>
-	<resultMap type="com.chinatelecom.model.IpSegment" id="BaseSegment">
-		<id property="ID" column="ID"/>
-		<result property="AREAID" column="AREAID" />
-		<result property="MASK" column="MASK" />
-		<result property="TYPE" column="TYPE" />
-		<result property="IP" column="IP" />
-		<result property="USEFOR" column="USEFOR" />
-		<result property="VALN" column="VALN" />
-		<result property="PARENTIPSEGMENT" column="PARENTIPSEGMENT" />
-		<result property="COMMENTS" column="COMMENTS" />
+	<resultMap type="com.chinatelecom.model.Equipment_Ipaddress" id="BaseAddr">
+		<id property="ID" column="F00"/>
+		<result property="EQUIPMENTID" column="F01" />
+		<result property="IPADDRESSID" column="F02" />
+		<result property="TYPE" column="F03" />
+		<result property="COMMENTS" column="F04" />	
 	</resultMap>
 	<resultMap type="com.chinatelecom.model.IpMap" id="BaseMap">
-		<id property="ID" column="ID"/>
-		<result property="DESTID" column="DESTID" />
-		<result property="SRCID" column="SRCID" />
-		<result property="SRCDES" column="SRCDES" />
-		<result property="DESTDES" column="DESTDES" />
-		<result property="SRCDES" column="SRCDES" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="SRCID" column="F01" />
+		<result property="SRCDES" column="F02" />
+		<result property="DESTID" column="F03" />	
+		<result property="DESTDES" column="F04" />
+		<result property="DIRECTION" column="F05" />
+		<result property="COMMENTS" column="F06" />
 	</resultMap>
 	<resultMap type="com.chinatelecom.model.Ip" id="BaseIp">
-		<id property="ID" column="ID"/>
-		<result property="IP" column="IP" />
-		<result property="GATEWAY  " column="GATEWAY  " />
-		<result property="HOSTNAME" column="HOSTNAME" />
-		<result property="IPSEGMENTID" column="IPSEGMENTID" />
-		<result property="USEFOR" column="USEFOR" />
-		<result property="IPGROUPID" column="IPGROUPID" />
-		<result property="PROPOSER" column="PROPOSER" />
-		<result property="CREATEDATE" column="CREATEDATE" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="IP" column="F01" />
+		<result property="GATEWAY  " column="F02" />
+		<result property="HOSTNAME" column="F03" />
+		<result property="IPSEGMENTID" column="F04" />
+		<result property="USEFOR" column="F05" />
+		<result property="IPGROUPID" column="F06" />
+		<result property="PROPOSER" column="F07" />
+		<result property="CREATEDATE" column="F08" />
+		<result property="COMMENTS" column="F09" />
 	</resultMap>
-	<select id="getResPoolInfo" parameterType="int" resultMap="BasePool">
-		select * from ResPool where ID=#{PoolID};
+	<select id="getAllIp" resultMap="BaseIp">
+		select * from IP;
 	</select>
-	<select id="getAreaNameByResPoolID" parameterType="int" resultType="java.lang.String">
-		select NAME from Area where RESPOOLID =#{ResPoolID};
+	<select id="getAllMap" resultMap="BaseMap">
+		select * from IpMap;
 	</select>
-	<select id="getAreaInfoByAreaID" parameterType="int" resultMap="BaseArea">
-		select * from Area where ID=#{AreaID};
+	<select id="getAllResPool" resultMap="BasePool">
+		select * from ResPool;
 	</select>
-	<select id="getSegmentIpByAreaID" parameterType="int" resultType="java.lang.String">
-		select IP from IPSegment where AREAID=#{AreaID};
+	<select id="getAllArea" resultMap="BaseArea">
+		select * from Area;
 	</select>
-	<select id="getSegmentIpInfoBySegmentID" parameterType="int" resultMap="BaseSegment">
-		select * from IPSegment where ID=#{SegmentID};
+	<select id="getIpMapByMapID" parameterType="java.lang.Integer" resultMap="BaseMap">
+		select * from IP_MAP 
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F00=#{_parameter};
+			</if>
+		</where>
 	</select>
-	<select id="getIpNameBySegmentIpID" parameterType="int" resultType="java.lang.String">
-		select IP from IP where IPSEGMENTID=#{SegmentID};
+	<select id="getIpInfo" parameterType="java.lang.Integer" resultMap="BaseIp">
+		select * from IP
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F00=#{_parameter};
+			</if>
+		</where>
 	</select>
-	<select id="getIpInfoByIpID" parameterType="int" resultMap="BaseIp">
-		select * from IP where ID=#{IpID});
+	<select id="EquipIPID" parameterType="java.lang.Integer" resultMap="BaseAddr">
+		select * from EQUIPMENT_IPADDRESS
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F01=#{_parameter};
+			</if>
+		</where>
 	</select>
-	<select id="getIpMapByMapID" parameterType="int" resultMap="BaseMap">
-		select * from IP_MAP where ID=#{MapID};
-	</select> -->
 </mapper>

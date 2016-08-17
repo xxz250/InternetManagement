@@ -1,15 +1,14 @@
-/*package com.chinatelecom.serviceimp;
+package com.chinatelecom.serviceimp;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.chinatelecom.dao.ipDao;
-import com.chinatelecom.model.Area;
-import com.chinatelecom.model.IPSegment;
+import com.chinatelecom.model.Equipment_Ipaddress;
 import com.chinatelecom.model.Ip;
 import com.chinatelecom.model.IpMap;
-import com.chinatelecom.model.ResPool;
 import com.chinatelecom.service.ipservice;
 
 public class ipserviceimpl implements ipservice{
@@ -18,37 +17,36 @@ public class ipserviceimpl implements ipservice{
     private ipDao ipInfo;
     
    // @Override
-    public ResPool getResPoolInfo(int PoolID){
-        ResPool pool=ipInfo.getResPoolInfo(PoolID);
-        return pool;
+    public List<Ip> getAllIp(){
+    	return ipInfo.getAllIp();
     }
-    public List<String> getAreaNameByResPoolID(int ResPoolID){
-        List<String> areaname=ipInfo.getAreaNameByResPoolID(ResPoolID);
-        return areaname;
-    }
-    public Area getAreaInfoByAreaID(int AreaID){
-        Area areaname=ipInfo.getAreaInfoByAreaID(AreaID);
-        return areaname;
-    }
-    public List<String> getSegmentIpByAreaID(int AreaID){
-        List<String> segment=ipInfo.getSegmentIpByAreaID(AreaID);
-        return segment;
-    }
-    public IPSegment getSegmentIpInfoBySegmentID(int SegmentID){
-        IPSegment segmentipinfo=ipInfo.getSegmentIpInfoBySegmentID(SegmentID);
-        return segmentipinfo;
-    }
-    public List<String> getIpNameBySegmentIpID(int SegmentID){
-        List<String> ipname=ipInfo.getIpNameBySegmentIpID(SegmentID);
-        return ipname;
-    }
-    public Ip getIpInfoByIpID(int IpID){
-        Ip ip=ipInfo.getIpInfoByIpID(IpID);
-        return ip;
-    }
-    public IpMap getIpMapByMapID(int MapID){
-        IpMap ipMap=ipInfo.getIpMapByMapID(MapID);
-        return ipMap;
-    }
+	public List<IpMap> getAllMap(){
+		return ipInfo.getAllMap();
+	}
+	public IpMap getIpMapByMapID(int mapID){
+		return ipInfo.getIpMapByMapID(mapID);
+	}
+	public List<Ip> getIpByEquipID(int equipmentID){
+		List<Equipment_Ipaddress> equipipLIst=ipInfo.getEquipIP(equipmentID);
+		List<Ip> ip=new ArrayList<Ip>();
+		for(Equipment_Ipaddress equipip:equipipLIst){
+			ip.add(ipInfo.getIpInfo(equipip.getIPADDRESSID()));
+		}
+		return ip;
+	}
+	public boolean IsOccupyOfIp(String ipAddr){
+		List<Ip> ipList=ipInfo.getAllIp();
+		for(Ip ip:ipList){
+			if(ipAddr.equals(ip.getIP())){
+				return true;
+			}
+		}
+		return false;
+	}
+	public List<Ip> getAllIpByResPool(int resPoolID){
+		
+	}
+	public List<Ip> getAllIpByArea(int areaID){
+		
+	}
 }
-*/

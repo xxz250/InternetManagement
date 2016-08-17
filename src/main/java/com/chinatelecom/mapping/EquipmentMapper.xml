@@ -2,74 +2,74 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chinatelecom.dao.mapper.EquipmentMapper">
 	<resultMap type="com.chinatelecom.model.Site" id="BaseSite">
-		<id property="ID" column="ID"/>
-		<result property="SITENAME" column="SITENAME" />
-		<result property="ADDRESS" column="ADDRESS" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="SITENAME" column="F01" />
+		<result property="ADDRESS" column="F02" />
+		<result property="COMMENTS" column="F03" />
 	</resultMap>
 	<resultMap type="com.chinatelecom.model.Room" id="BaseRoom">
-		<id property="ID" column="ID"/>
-		<result property="SITEID" column="SITEID" />
-		<result property="NAME" column="NAME" />
-		<result property="ROOMNUM" column="ROOMNUM" />
-		<result property="AREA" column="AREA" />
-		<result property="MAXRACKNUM" column="MAXRACKNUM" />
-		<result property="USEDRACKNUM" column="USEDRACKNUM" />
-		<result property="FREERACKNUM" column="FREERACKNUM" />
-		<result property="USEFOR" column="USEFOR" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="SITEID" column="F01" />
+		<result property="NAME" column="F02" />
+		<result property="ROOMNUM" column="F03" />
+		<result property="AREA" column="F04" />
+		<result property="MAXRACKNUM" column="F05" />
+		<result property="USEDRACKNUM" column="F06" />
+		<result property="FREERACKNUM" column="F07" />
+		<result property="USEFOR" column="F08" />
+		<result property="COMMENTS" column="F09" />
 	</resultMap>
 	<resultMap type="com.chinatelecom.model.Rack" id="BaseRack">
-		<id property="ID" column="ID"/>
-		<result property="ROOMID" column="ROOMID" />
-		<result property="COLUMEID" column="COLUMEID" />
-		<result property="SEQUENCE" column="SEQUENCE" />
-		<result property="HEIGHT" column="HEIGHT" />
-		<result property="LOCATIONX" column="LOCATIONX" />
-		<result property="LOCATIONY" column="LOCATIONY" />
-		<result property="ISINMAINTENCE" column="ISINMAINTENCE" />
-		<result property="ISStandarded" column="ISStandarded" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="ROOMID" column="F01" />
+		<result property="COLUMEID" column="F02" />
+		<result property="SEQUENCE" column="F03" />
+		<result property="HEIGHT" column="F04" />
+		<result property="LOCATIONX" column="F05" />
+		<result property="LOCATIONY" column="F06" />
+		<result property="ISINMAINTENCE" column="F07" />
+		<result property="ISStandarded" column="F08" />
+		<result property="COMMENTS" column="F09" />
 	</resultMap>
 	<resultMap type="com.chinatelecom.model.Vendor" id="BaseVendor">
-		<id property="ID" column="ID"/>
-		<result property="NAME" column="NAME" />
-		<result property="NAMEABB" column="NAMEABB" />
-		<result property="ADDRESS" column="ADDRESS" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="NAME" column="F01" />
+		<result property="NAMEABB" column="F02" />
+		<result property="ADDRESS" column="F03" />
+		<result property="COMMENTS" column="F04" />
 	</resultMap>
 	<resultMap type="com.chinatelecom.model.Equipment" id="BaseEquipment">
-		<id property="ID" column="ID"/>
-		<result property="RACKID" column="RACKID" />
-		<result property="HOSTNAME" column="HOSTNAME" />
-		<result property="MANAGEMENTIP" column="MANAGEMENTIP" />
-		<result property="HOSTLABEL" column="HOSTLABEL" />
-		<result property="EQUIPMENTTYPE" column="EQUIPMENTTYPE" />
-		<result property="USEFOR" column="USEFOR" />
-		<result property="SYSTEMID" column="SYSTEMID" />
-		<result property="SERIALNO" column="SERIALNO" />
-		<result property="STARTLOCATION" column="STARTLOCATION" />
-		<result property="WORTH" column="WORTH" />
-		<result property="BELONGSTO" column="BELONGSTO" />
-		<result property="MAINTENANCEDATE" column="MAINTENANCEDATE" />
-		<result property="MAINTENANCEDEP" column="MAINTENANCEDEP" />
-		<result property="MAINTENANCEENDDATE" column="MAINTENANCEENDDATE" />
-		<result property="FEUSED" column="FEUSED" />
-		<result property="OPTUSED" column="OPTUSED" />
-		<result property="PARENTEQUIPMENT" column="PARENTEQUIPMENT" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="RACKID" column="F01" />
+		<result property="HOSTNAME" column="F02" />
+		<result property="MANAGEMENTIP" column="F03" />
+		<result property="HOSTLABEL" column="F04" />
+		<result property="EQUIPMENTTYPE" column="F05" />
+		<result property="USEFOR" column="F06" />
+		<result property="SYSTEMID" column="F07" />
+		<result property="SERIALNO" column="F08" />
+		<result property="STARTLOCATION" column="F09" />
+		<result property="WORTH" column="F10" />
+		<result property="BELONGSTO" column="F11" />
+		<result property="MAINTENANCEDATE" column="F12" />
+		<result property="MAINTENANCEDEP" column="F13" />
+		<result property="MAINTENANCEENDDATE" column="F14" />
+		<result property="FEUSED" column="F15" />
+		<result property="OPTUSED" column="F16" />
+		<result property="PARENTEQUIPMENT" column="F17" />
+		<result property="COMMENTS" column="F18" />
 	</resultMap> 
 	<resultMap type="com.chinatelecom.model.EquipmentType" id="BaseType">
-		<id property="ID" column="ID"/>
-		<result property="VENDORID" column="VENDORID" />
-		<result property="TYPE" column="TYPE" />
-		<result property="MODEL" column="MODEL" />
-		<result property="HEIGHT" column="HEIGHT" />
-		<result property="POWER" column="POWER" />
-		<result property="FETOTAL" column="FETOTAL" />
-		<result property="OPTTOTAL" column="OPTTOTAL" />
-		<result property="WEIGHT" column="WEIGHT" />
-		<result property="COMMENTS" column="COMMENTS" />
+		<id property="ID" column="F00"/>
+		<result property="VENDORID" column="F01" />
+		<result property="TYPE" column="F02" />
+		<result property="MODEL" column="F03" />
+		<result property="HEIGHT" column="F04" />
+		<result property="POWER" column="F05" />
+		<result property="FETOTAL" column="F06" />
+		<result property="OPTTOTAL" column="F07" />
+		<result property="WEIGHT" column="F08" />
+		<result property="COMMENTS" column="F09" />
 	</resultMap>
     <select id="getAllSite"  resultMap="BaseSite">
 		select * from Site
@@ -82,24 +82,26 @@
 	</select>
 	<select id="getAllRoomBySite" parameterType="java.lang.Integer" resultMap="BaseRoom">
 		select * from Room
-		where
-		<if test="_parameter != null and _parameter!= ' '">
-			SITEID=#{_parameter}
-		</if>	
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F01=#{_parameter}
+			</if>
+		</where>	
 	</select>
-	<select id="getAllRackByRoom" parameterType="int" resultMap="BaseRack">
+	<select id="getAllRackByRoom" parameterType="java.lang.Integer" resultMap="BaseRack">
 		select * from Rack
 		where
-		<if test="RoomID != null and RoomID!= ' ' ">
-			ROOMID=#{RoomID}
+		<if test="_parameter != null and _parameter!= ' ' ">
+			F01=#{_parameter}
 		</if>
 	</select>
-    <select id="getAllEqulpmentByRack" parameterType="int" resultMap="BaseEquipment">
+    <select id="getAllEqulpmentByRack" parameterType="java.lang.Integer" resultMap="BaseEquipment">
 		select * from Equipment 
-		where
-		<if test="RackID != null and RackID!= ' ' ">
-			RACKID={#RackID}
-		</if>
+		<where>
+			<if test="_parameter != null and _parameter!= ' ' ">
+				F01=#{_parameter}
+			</if>
+		</where>
 	</select>
 	<select id="getAllVendor"  resultMap="BaseVendor">
 		select * from Vendor
@@ -107,18 +109,20 @@
 	<select id="getAllEquipmentType"  resultMap="BaseType">
 		select * from EQUIPMENTTYPE
 	</select>
-	<select id="getAllEquipmentByType" parameterType="int" resultMap="BaseEquipment">
+	<select id="getAllEquipmentByType" parameterType="java.lang.Integer" resultMap="BaseEquipment">
 		select * from EQUIPMENT
-		where
-		<if test="Type != null and Type!= ' '">
-			EQUIPMENTTYPE={#Type}
-		</if>
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F05=#{_parameter}
+			</if>
+		</where>
 	</select>
-	<select id="getAllTypeByVendorID" parameterType="int" resultMap="BaseType">
+	<select id="getAllTypeByVendorID" parameterType="java.lang.Integer" resultMap="BaseType">
 		select * from EQUIPMENTTYPE
-		where
-		<if test="VendorID != null and VendorID!= ' ' ">
-			VENDORID={#VendorID}
-		</if>
+		<where>
+			<if test="_parameter != null and _parameter!= ' ' ">
+				F01=#{_parameter}
+			</if>
+		</where>
 	</select>
 </mapper>
