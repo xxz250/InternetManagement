@@ -23,6 +23,12 @@ public class equipserviceimpl implements equipservice{
 	public List<Site> getAllSite(){
     	return getEquipInfo.getAllSite();
     }
+    public List<Room> getAllRoom(){
+    	return getEquipInfo.getAllRoom();
+    }
+    public List<Rack> getAllRack(){
+    	return getEquipInfo.getAllRack();
+    }
 	public List<Room> getAllRoomBySite(int SiteID){
 		return getEquipInfo.getAllRoomBySite(SiteID);
 	}

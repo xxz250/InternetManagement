@@ -14,6 +14,8 @@ import com.chinatelecom.model.Vendor;
 @Service
 public interface equipservice {
 	public List<Site> getAllSite();
+	public List<Room> getAllRoom();
+	public List<Rack> getAllRack();
 	public List<Room> getAllRoomBySite(int SiteID);
 	public List<Rack> getAllRackByRoom(int RoomID);
 	public List<Equipment> getAllEqulpmentByRack(int RackID);

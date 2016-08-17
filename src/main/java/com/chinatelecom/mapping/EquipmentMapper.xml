@@ -71,8 +71,14 @@
 		<result property="WEIGHT" column="WEIGHT" />
 		<result property="COMMENTS" column="COMMENTS" />
 	</resultMap>
-   <select id="getAllSite"  resultMap="BaseSite">
+    <select id="getAllSite"  resultMap="BaseSite">
 		select * from Site
+	</select>
+	<select id="getAllRoom"  resultMap="BaseRoom">
+		select * from Room
+	</select>
+	<select id="getAllRack"  resultMap="BaseRack">
+		select * from Rack
 	</select>
 	<select id="getAllRoomBySite" parameterType="java.lang.Integer" resultMap="BaseRoom">
 		select * from Room

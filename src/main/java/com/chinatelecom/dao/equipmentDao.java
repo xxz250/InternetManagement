@@ -21,6 +21,12 @@ public class equipmentDao {
     public List<Site> getAllSite(){
     	return mapper.getAllSite();
     }
+    public List<Room> getAllRoom(){
+    	return mapper.getAllRoom();
+    }
+    public List<Rack> getAllRack(){
+    	return mapper.getAllRack();
+    }
 	public List<Room> getAllRoomBySite(int SiteID){
 		return mapper.getAllRoomBySite(SiteID);
 	}
