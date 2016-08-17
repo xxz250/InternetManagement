@@ -21,13 +21,13 @@ public class EpuipWebservice {
 
     @RequestMapping("/getallepuipinfo")
     @ResponseBody
-    public Object getSiteInfoBySite(
+    public Object getAllRoomBySite(
             @RequestParam(value = "nameid", required = false) String name) {
         int ID = Integer.parseInt(name);
-        List<Room> site = equip.getAllRoomBySite(ID);
-        if(site.isEmpty()){
+        List<Room> room = equip.getAllRoomBySite(ID);
+        if(room.isEmpty()){
             return "no information";
         }
-        return site.toString();
+        return room.toString();
     }  
 }

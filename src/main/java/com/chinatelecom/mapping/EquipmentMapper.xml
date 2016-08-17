@@ -72,13 +72,13 @@
 		<result property="COMMENTS" column="COMMENTS" />
 	</resultMap>
    <select id="getAllSite"  resultMap="BaseSite">
-		select * from Site ;
+		select * from Site
 	</select>
-	<select id="getAllRoomBySite" parameterType="int" resultMap="BaseRoom">
+	<select id="getAllRoomBySite" parameterType="java.lang.Integer" resultMap="BaseRoom">
 		select * from Room
 		where
-		<if test="SiteID != null and SiteID!= ' ' ">
-			SITEID=#{SiteID}
+		<if test="_parameter != null and _parameter!= ' '">
+			SITEID=#{_parameter}
 		</if>	
 	</select>
 	<select id="getAllRackByRoom" parameterType="int" resultMap="BaseRack">
@@ -92,7 +92,7 @@
 		select * from Equipment 
 		where
 		<if test="RackID != null and RackID!= ' ' ">
-			RACKID=#{RackID}
+			RACKID={#RackID}
 		</if>
 	</select>
 	<select id="getAllVendor"  resultMap="BaseVendor">
