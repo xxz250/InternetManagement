@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.chinatelecom.constants.ReturnValue;
 import com.chinatelecom.model.Equipment;
 import com.chinatelecom.model.EquipmentType;
 import com.chinatelecom.model.Rack;
@@ -26,10 +27,10 @@ public class EpuipWebservice {
 
     @RequestMapping("/getallepuipinfo")
     @ResponseBody
-    /*public Object getAllSite(){
+    public Object getAllSite(){
     	List<Site> site=equip.getAllSite();
     	if(site.isEmpty()){
-    		return "no information";
+    		return ReturnValue.empty;
     	}
     	return site;
     }
@@ -43,7 +44,7 @@ public class EpuipWebservice {
     public Object getAllRack(){
     	List<Rack> rack=equip.getAllRack();
     	if(rack.isEmpty()){
-    		return "no information";
+    		return ReturnValue.empty;
     	}
     	return rack;
     }
@@ -54,11 +55,11 @@ public class EpuipWebservice {
     		int ID = Integer.parseInt(id);
             room = equip.getAllRoomBySite(ID);
             if(room.isEmpty()){
-                return "no information";
+                return ReturnValue.empty;
             }
     	}
     	else{
-    		return "context can not be null";
+    		return ReturnValue.error;
     	}
     	return room;
     } 
@@ -69,11 +70,11 @@ public class EpuipWebservice {
     		int ID=Integer.parseInt(id);
     		rack=equip.getAllRackByRoom(ID);
     		if(rack.isEmpty()){
-    			return "no information";
+    			return ReturnValue.empty;
     		}
     	}
     	else{
-    		return "context can not be null";
+    		return ReturnValue.error;
     	}
     	return rack;
     }
@@ -84,11 +85,11 @@ public class EpuipWebservice {
     		int ID=Integer.parseInt(id);
     		equipment=equip.getAllEqulpmentByRack(ID);
     		if(equipment.isEmpty()){
-    			return "no information";
+    			return ReturnValue.empty;
     		}
     	}
     	else{
-    		return "context can not be null";
+    		return ReturnValue.error;
     	}
     	return equipment;	
     }
@@ -96,7 +97,7 @@ public class EpuipWebservice {
     	List<Vendor> vendor=new ArrayList<Vendor>();
     	vendor=equip.getAllVendor();
     	if(vendor.isEmpty()){
-    		return "no information";
+    		return ReturnValue.empty;
     	}
     	return vendor;
     }
@@ -104,10 +105,10 @@ public class EpuipWebservice {
     	List<EquipmentType> type=new ArrayList<EquipmentType>();
     	type=equip.getAllEquipmentType();
     	if(type.isEmpty()){
-    		return "no information";
+    		return ReturnValue.empty;
     	}
     	return type;
-    }*/
+    }
     public Object getAllEquipmentByVendorID(
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Equipment> equipment=new ArrayList<Equipment>();
@@ -115,26 +116,26 @@ public class EpuipWebservice {
     		int ID=Integer.parseInt(id);
     		equipment=equip.getAllEquipmentByVendorID(ID);
     		if(equipment.isEmpty()){
-    			return "no information";
+    			return ReturnValue.empty;
     		}
     	}
     	else{
-    		return "context can not be null";
+    		return ReturnValue.error;
     	}
     	return equipment;
     }
-   /* public Object getAllEquipByEquipType(
+    public Object getAllEquipByEquipType(
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Equipment> equipment=new ArrayList<Equipment>();
     	if(id!=""){
     		int ID=Integer.parseInt(id);
     		equipment=equip.getAllEquipByEquipType(ID);
     		if(equipment.isEmpty()){
-    			return "no information";
+    			return ReturnValue.empty;
     		}
     	}
     	else{
-    		return "context can not be null";
+    		return ReturnValue.error;
     	}
     	return equipment;
     }
@@ -145,11 +146,11 @@ public class EpuipWebservice {
     		int ID=Integer.parseInt(id);
     		rack=equip.getAllRackBySiteID(ID);
     		if(rack.isEmpty()){
-    			return "no information";
+    			return ReturnValue.empty;
     		}
     	}
     	else{
-    		return "context can not be null";
+    		return ReturnValue.error;
     	}
     	return rack;
     }
@@ -160,12 +161,12 @@ public class EpuipWebservice {
     		int ID=Integer.parseInt(id);
     		equipment=equip.getAllEquipBySiteID(ID);
     		if(equipment.isEmpty()){
-    			return "no information";
+    			return ReturnValue.empty;
     		}
     	}
     	else{
-    		return "context can not be null";
+    		return ReturnValue.error;
     	}
     	return equipment;
-    }*/
+    }
 }

@@ -6,9 +6,12 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.chinatelecom.dao.ipDao;
+import com.chinatelecom.model.Area;
 import com.chinatelecom.model.Equipment_Ipaddress;
 import com.chinatelecom.model.Ip;
 import com.chinatelecom.model.IpMap;
+import com.chinatelecom.model.IpSegment;
+import com.chinatelecom.model.ResPool;
 import com.chinatelecom.service.ipservice;
 
 public class ipserviceimpl implements ipservice{
@@ -23,6 +26,9 @@ public class ipserviceimpl implements ipservice{
 	public List<IpMap> getAllMap(){
 		return ipInfo.getAllMap();
 	}
+	public List<ResPool> getAllResPool(){
+		return ipInfo.getAllResPool();
+	}
 	public IpMap getIpMapByMapID(int mapID){
 		return ipInfo.getIpMapByMapID(mapID);
 	}
@@ -34,19 +40,16 @@ public class ipserviceimpl implements ipservice{
 		}
 		return ip;
 	}
-	public boolean IsOccupyOfIp(String ipAddr){
-		List<Ip> ipList=ipInfo.getAllIp();
-		for(Ip ip:ipList){
-			if(ipAddr.equals(ip.getIP())){
-				return true;
+	public List<Ip> getAllIpByResPool(int resPoolID){
+		List<Area> areaList=ipInfo.getAllAreaByResPool(resPoolID);
+		List<Ip> ip=new ArrayList<Ip>();
+		for(Area area:areaList){
+			List<IpSegment> segmentList=ipInfo.getAllIpSegmentByArea(area.getID());
+			for(IpSegment segment:segmentList){
+				List<Ip> ipList=ipInfo.getAllIpByIpSegment(segment.getID());
+				ipList.addAll(ipList);
 			}
 		}
-		return false;
-	}
-	public List<Ip> getAllIpByResPool(int resPoolID){
-		
-	}
-	public List<Ip> getAllIpByArea(int areaID){
-		
+		return ip;
 	}
 }

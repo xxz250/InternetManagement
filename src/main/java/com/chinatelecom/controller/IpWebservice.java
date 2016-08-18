@@ -1,4 +1,7 @@
-/*package com.chinatelecom.controller;
+package com.chinatelecom.controller;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,6 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.chinatelecom.constants.ReturnValue;
+import com.chinatelecom.model.Ip;
+import com.chinatelecom.model.IpMap;
+import com.chinatelecom.model.ResPool;
 import com.chinatelecom.service.ipservice;
 
 @Controller
@@ -17,71 +24,72 @@ public class IpWebservice {
 
     @RequestMapping("/getallipinfo")
     @ResponseBody
-    
-    public Object getResPoolInfo(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getResPoolInfo(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-    public Object getAreaNameByResPoolID(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getAreaNameByResPoolID(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-    public Object getAreaInfoByAreaID(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getAreaInfoByAreaID(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-    public Object getSegmentIpByAreaID(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getSegmentIpByAreaID(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-    public Object getSegmentIpInfoBySegmentID(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getSegmentIpInfoBySegmentID(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-    public Object getIpNameBySegmentIpID(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getIpNameBySegmentIpID(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-    public Object getIpInfoByIpID(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getIpInfoByIpID(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-    public Object getIpMapByMapID(@RequestParam(value = "nameid",required = false) String name) {
-        int ID=Integer.parseInt(name); 
-        Object result=ip.getIpMapByMapID(ID);
-        if(null==result){
-            return "no infomation";
-        }
-        return result; 
-    } 
-
+    public Object getAllIp(){
+    	List<Ip> ipList=ip.getAllIp();
+    	if(ipList.isEmpty()){
+    		return ReturnValue.empty;
+    	}
+    	return ipList;
+    }
+	public Object getAllMap(){
+		List<IpMap> ipmapList=ip.getAllMap();
+		if(ipmapList.isEmpty()){
+			return ReturnValue.empty;
+		}
+		return ipmapList;
+	}
+	public Object getAllResPool(){
+		List<ResPool> respool=ip.getAllResPool();
+		if(respool.isEmpty()){
+			return ReturnValue.empty;
+		}
+		return respool;
+	}
+	public Object getIpMapByMapID(
+			@RequestParam(value = "nameid",required = false) String id){
+		IpMap ipmap=new IpMap();
+		if(id!=""){
+			int ID=Integer.parseInt(id);
+			ipmap=ip.getIpMapByMapID(ID);
+			if(ipmap==null){
+				return ReturnValue.empty;
+			}
+		}
+		else{
+			return ReturnValue.error;
+		}	
+		return ipmap;
+	}
+	public Object getIpByEquipID(
+			@RequestParam(value = "nameid",required = false) String id){
+		List<Ip> ipList=new ArrayList<Ip>();
+		if(id!=""){
+			int ID=Integer.parseInt(id);
+			ipList=ip.getIpByEquipID(ID);
+			if(ipList.isEmpty()){
+				return ReturnValue.empty;
+			}
+		}
+		else{
+			return ReturnValue.error;
+		}
+		return ipList;
+	}
+	public Object IsOccupyOfIp(
+			@RequestParam(value = "nameid",required = false) String id,
+			@RequestParam(value = "ipid",required = false) String ipaddr){
+		if(id!=""&&ipaddr!=""){
+			int ID=Integer.parseInt(id);
+			List<Ip> ipList=ip.getAllIpByResPool(ID);
+			for(Ip ipobject:ipList){
+				if(ipaddr.equals(ipobject.getIP())){
+					return true;
+				}
+			}
+		}
+		else{
+			return ReturnValue.error;
+		}
+		return false;
+	}
 }
-*/

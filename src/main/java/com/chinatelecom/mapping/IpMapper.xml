@@ -17,6 +17,17 @@
 		<result property="USEFOR" column="F05" />	
 		<result property="COMMENTS" column="F06" />
 	</resultMap>
+	<resultMap type="com.chinatelecom.model.IpSegment" id="BaseSegment">
+		<id property="ID" column="F00"/>
+		<result property="AREAID" column="F01" />
+		<result property="IP" column="F02" />
+		<result property="MASK" column="F03" />
+		<result property="VALN" column="F04" />
+		<result property="TYPE" column="F05" />
+		<result property="PARENTIPSEGMENT" column="F06" />
+		<result property="USEFOR" column="F07" />
+		<result property="COMMENTS" column="F08" />
+	</resultMap>
 	<resultMap type="com.chinatelecom.model.Equipment_Ipaddress" id="BaseAddr">
 		<id property="ID" column="F00"/>
 		<result property="EQUIPMENTID" column="F01" />
@@ -36,7 +47,7 @@
 	<resultMap type="com.chinatelecom.model.Ip" id="BaseIp">
 		<id property="ID" column="F00"/>
 		<result property="IP" column="F01" />
-		<result property="GATEWAY  " column="F02" />
+		<result property="GATEWAY" column="F02" />
 		<result property="HOSTNAME" column="F03" />
 		<result property="IPSEGMENTID" column="F04" />
 		<result property="USEFOR" column="F05" />
@@ -46,22 +57,19 @@
 		<result property="COMMENTS" column="F09" />
 	</resultMap>
 	<select id="getAllIp" resultMap="BaseIp">
-		select * from IP;
+		select * from IP
 	</select>
 	<select id="getAllMap" resultMap="BaseMap">
-		select * from IpMap;
+		select * from Ip_Map
 	</select>
 	<select id="getAllResPool" resultMap="BasePool">
-		select * from ResPool;
-	</select>
-	<select id="getAllArea" resultMap="BaseArea">
-		select * from Area;
+		select * from ResPool
 	</select>
 	<select id="getIpMapByMapID" parameterType="java.lang.Integer" resultMap="BaseMap">
 		select * from IP_MAP 
 		<where>
 			<if test="_parameter != null and _parameter!= ' '">
-				F00=#{_parameter};
+				F00=#{_parameter}
 			</if>
 		</where>
 	</select>
@@ -69,15 +77,39 @@
 		select * from IP
 		<where>
 			<if test="_parameter != null and _parameter!= ' '">
-				F00=#{_parameter};
+				F00=#{_parameter}
 			</if>
 		</where>
 	</select>
-	<select id="EquipIPID" parameterType="java.lang.Integer" resultMap="BaseAddr">
+	<select id="getEquipIP" parameterType="java.lang.Integer" resultMap="BaseAddr">
 		select * from EQUIPMENT_IPADDRESS
 		<where>
 			<if test="_parameter != null and _parameter!= ' '">
-				F01=#{_parameter};
+				F01=#{_parameter}
+			</if>
+		</where>
+	</select>
+	<select id="getAllAreaByResPool" parameterType="java.lang.Integer" resultMap="BaseArea">
+		select * from Area
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F03=#{_parameter}
+			</if>
+		</where>
+	</select>
+	<select id="getAllIpSegmentByArea" parameterType="java.lang.Integer" resultMap="BaseSegment">
+		select * from IpSegment
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F01=#{_parameter}
+			</if>
+		</where>
+	</select>
+	<select id="getAllIpByIpSegment" parameterType="java.lang.Integer" resultMap="BaseIp">
+		select * from IP
+		<where>
+			<if test="_parameter != null and _parameter!= ' '">
+				F04=#{_parameter}
 			</if>
 		</where>
 	</select>

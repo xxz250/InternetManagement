@@ -6,14 +6,14 @@ import org.springframework.stereotype.Service;
 
 import com.chinatelecom.model.Ip;
 import com.chinatelecom.model.IpMap;
+import com.chinatelecom.model.ResPool;
 
 @Service
 public interface ipservice {
 	public List<Ip> getAllIp();
 	public List<IpMap> getAllMap();
+	public List<ResPool> getAllResPool();
 	public IpMap getIpMapByMapID(int mapID);
 	public List<Ip> getIpByEquipID(int equipmentID);
-	public boolean IsOccupyOfIp(String ipAddr);
 	public List<Ip> getAllIpByResPool(int resPoolID);
-	public List<Ip> getAllIpByArea(int areaID);
 }
