@@ -9,9 +9,9 @@
 
 	<appender name="rollingFile"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
-		<file>logs/mining.log</file>
+		<file>E:/chinatelecom/InternetManagement/logs/interlog.log</file>
 		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-			<fileNamePattern>logs/mining.%d{yyyy-MM-dd}.log</fileNamePattern>
+			<fileNamePattern>E:/chinatelecom/InternetManagement/logs/interlog.%d{yyyy-MM-dd}.log</fileNamePattern>
 		</rollingPolicy>
 		<encoder>
 			<pattern>[%-5level][%date]--%msg--[%M][%F{16},%L]%n</pattern>

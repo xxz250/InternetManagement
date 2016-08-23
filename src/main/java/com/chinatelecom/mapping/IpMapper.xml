@@ -77,7 +77,7 @@
 		select * from IP
 		<where>
 			<if test="_parameter != null and _parameter!= ' '">
-				F00=#{_parameter}
+				F00=#{_parameter,jdbcType=VARCHAR}
 			</if>
 		</where>
 	</select>

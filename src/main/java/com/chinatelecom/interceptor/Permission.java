@@ -2,8 +2,10 @@ package com.chinatelecom.interceptor;
 
 import java.util.HashMap;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -28,7 +30,12 @@ public class Permission implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
         // TODO Auto-generated method stub
-        if (null != request.getSession().getAttribute("USERNAME")) {
+    	/*String url = request.getRequestURI();
+        if(url.indexOf("login.action")>=0){
+            return true;
+        }*/
+    	
+        if (null != request.getSession().getAttribute("username")) {
             return true;
         }
         try {
@@ -41,6 +48,11 @@ public class Permission implements HandlerInterceptor {
             // TODO Auto-generated catch block
             LOG.error("ajax error");
         }
+        RequestDispatcher rd = request.getRequestDispatcher("/login.html");  
+        try {  
+            rd.forward(request, response);  
+                 return false;  
+        }catch(Exception e){}  
         return false;
     }
 

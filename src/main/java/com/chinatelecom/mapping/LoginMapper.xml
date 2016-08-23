@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.chinatelecom.dao.mapper.LoginMapper">
+	<resultMap type="com.chinatelecom.model.User" id="BaseUser">
+		<id property="ID" column="F00"/>
+		<result property="LOGINNAME" column="F01" />
+		<result property="LOGINTIMES" column="F05" />
+		<result property="NAME" column="F08" />
+		<result property="DEPARTMENT" column="F09" />
+		<result property="PHONE" column="F10" />
+		<result property="RULEID" column="F14" />
+	</resultMap>
+	<select id="loginUser"  resultMap="BaseUser">
+		select * from OPERATOR
+		<where>
+			<if test='name != null and name!= " "'>
+				F01=#{name,jdbcType=VARCHAR}
+			</if>
+			<if test='passwd != null and passwd!= " "'>
+				and F02=#{passwd,jdbcType=VARCHAR}
+			</if>
+		</where>
+	</select>
+</mapper>

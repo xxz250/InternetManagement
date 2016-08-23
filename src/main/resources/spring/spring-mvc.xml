@@ -14,11 +14,17 @@
 			expression="com.chinatelecom.*" />
 	</context:component-scan>
 
-	<!-- <mvc:interceptors> <bean class="com.chinatelecom.interceptor" /> <mvc:interceptor> 
-		<mvc:mapping path="/**"/> <mvc:exclude-mapping path="/images/**"/> <mvc:exclude-mapping 
-		path="/js/**"/> <mvc:exclude-mapping path="/css/**"/> <mvc:exclude-mapping 
-		path="/test/**"/> <bean class="com.baidu.fbu.apsmis.interceptor.PermissionInterceptor" 
-		/> </mvc:interceptor> </mvc:interceptors> -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/images/**" />
+			<mvc:exclude-mapping path="/js/**" />
+			<mvc:exclude-mapping path="/css/**" />
+			<mvc:exclude-mapping path="/page/login.html" />
+			<mvc:exclude-mapping path="/loginf/logins" />
+			<bean class="com.chinatelecom.interceptor.Permission" />
+		</mvc:interceptor>
+	</mvc:interceptors>
 
 	<!--RequestMappingHandlerAdapter -->
 	<mvc:annotation-driven>
@@ -31,11 +37,11 @@
 
 	<mvc:default-servlet-handler />
 
-	<mvc:resources location="/images/" mapping="/images/**" />
+	<!-- <mvc:resources location="/images/" mapping="/images/**" />
 	<mvc:resources location="/js/" mapping="/js/**" />
 	<mvc:resources location="/css/" mapping="/css/**" />
-	<mvc:resources location="/page/" mapping="/page/**" />
-
+	<mvc:resources location="/page/" mapping="/page/**" /> -->
+       
 	<bean id="viewResolver"
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/page/" />
@@ -89,5 +95,25 @@
 			</map>
 		</property>
 	</bean>
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+ 		<property name="urlMap">
+     		<map>
+          		<entry key="/loginf/**" value="myResourceHandler" />
+    		</map>
+ 		</property>
+ 		<property name="order" value="100000" />       
+	</bean>
+	<bean id="myResourceHandler" name="myResourceHandler"
+      	class="org.springframework.web.servlet.resource.ResourceHttpRequestHandler">
+      	<property name="locations" value="/logins/" />
+      	<property name="supportedMethods">
+         	<list>
+            	<value>GET</value>
+            	<value>HEAD</value>
+            	<value>POST</value>
+         	</list>
+     	</property>
+	</bean>	
 </beans>
     

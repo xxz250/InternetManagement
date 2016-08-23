@@ -10,15 +10,14 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+		
 	<context:property-placeholder order="1"
-		location="file:/home/work/var/conf/mining/config.properties"
-		ignore-unresolvable="true" ignore-resource-not-found="true" />
-	<context:property-placeholder order="2"
 		location="classpath:dbconfig.properties" ignore-unresolvable="true"
 		ignore-resource-not-found="true" />
 
 	<context:annotation-config />
 	<aop:aspectj-autoproxy />
-	<import resource="spring-db.xml" />
-
+	
+	<import resource="spring-db.xml" />	
+	
 </beans>
