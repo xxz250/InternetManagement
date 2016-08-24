@@ -712,3 +712,441 @@ Caused by: java.net.ConnectException: Connection refused: connect
 [DEBUG][2016-08-24 14:22:09,273]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
 [DEBUG][2016-08-24 14:22:11,898]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
 [DEBUG][2016-08-24 14:22:27,128]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[INFO ][2016-08-24 14:51:33,404]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[INFO ][2016-08-24 14:51:34,130]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 14:56:17,849]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[INFO ][2016-08-24 14:56:19,033]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:01:15,674]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[INFO ][2016-08-24 15:01:16,973]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:09:05,021]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:09:06,105]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@4db9a522.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472022546105.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 15:11:30,396]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:11:37,913]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:11:39,008]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@21c3e56b.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472022699008.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 15:12:14,339]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:12:15,361]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@13f992b1.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472022735361.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 15:13:49,257]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:14:05,460]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:14:06,669]--Creating a new instance of CacheManager using the diskStorePath "E:/cache" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@13f992b1.
+The diskStore path for this CacheManager will be set to E:/cache\ehcache_auto_created_1472022846669.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 15:16:32,111]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:16:33,233]--Creating a new instance of CacheManager using the diskStorePath "E:/cache" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@1d8a306a.
+The diskStore path for this CacheManager will be set to E:/cache\ehcache_auto_created_1472022993233.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 15:18:30,920]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:18:32,003]--Creating a new instance of CacheManager using the diskStorePath "E:/cache" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@4db9a522.
+The diskStore path for this CacheManager will be set to E:/cache\ehcache_auto_created_1472023112003.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 15:20:10,275]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:20:10,929]--No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/Program%20Files/apache-tomcat-7.0.70/webapps/InternetManagement/WEB-INF/lib/ehcache-core-2.4.7.jar!/ehcache-failsafe.xml--[parseConfiguration][ConfigurationFactory.java,134]
+[INFO ][2016-08-24 15:20:11,421]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:22:19,860]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:22:20,545]--No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/Program%20Files/apache-tomcat-7.0.70/webapps/InternetManagement/WEB-INF/lib/ehcache-core-2.4.7.jar!/ehcache-failsafe.xml--[parseConfiguration][ConfigurationFactory.java,134]
+[INFO ][2016-08-24 15:22:20,948]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:25:32,091]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:25:32,727]--No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/Program%20Files/apache-tomcat-7.0.70/webapps/InternetManagement/WEB-INF/lib/ehcache-core-2.4.7.jar!/ehcache-failsafe.xml--[parseConfiguration][ConfigurationFactory.java,134]
+[INFO ][2016-08-24 15:25:33,182]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:26:51,810]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:26:52,273]--No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/Program%20Files/apache-tomcat-7.0.70/webapps/InternetManagement/WEB-INF/lib/ehcache-core-2.4.7.jar!/ehcache-failsafe.xml--[parseConfiguration][ConfigurationFactory.java,134]
+[INFO ][2016-08-24 15:26:52,667]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:33:04,840]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:33:05,529]--No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/Program%20Files/apache-tomcat-7.0.70/webapps/InternetManagement/WEB-INF/lib/ehcache-core-2.4.7.jar!/ehcache-failsafe.xml--[parseConfiguration][ConfigurationFactory.java,134]
+[INFO ][2016-08-24 15:33:05,960]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:35:30,814]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:35:31,366]--No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/Program%20Files/apache-tomcat-7.0.70/webapps/InternetManagement/WEB-INF/lib/ehcache-core-2.4.7.jar!/ehcache-failsafe.xml--[parseConfiguration][ConfigurationFactory.java,134]
+[INFO ][2016-08-24 15:35:31,715]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:35:58,319]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:35:59,522]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@13f992b1.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472024159522.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 15:36:53,533]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:37:10,117]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:37:10,871]--No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/D:/Program%20Files/apache-tomcat-7.0.70/webapps/InternetManagement/WEB-INF/lib/ehcache-core-2.4.7.jar!/ehcache-failsafe.xml--[parseConfiguration][ConfigurationFactory.java,134]
+[INFO ][2016-08-24 15:37:11,260]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:38:27,101]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:38:28,352]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@4db9a522.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472024308352.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 15:41:20,014]--==>  Preparing: select * from OPERATOR WHERE F01=? and F02=? --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:41:20,284]--==> Parameters: guest(String), Z3Vlc3Q=
+(String)--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:41:20,348]--<==      Total: 1--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:41:26,156]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 15:41:26,159]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:41:26,160]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:41:28,787]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:41:39,873]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[INFO ][2016-08-24 15:42:02,735]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 15:42:09,265]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 15:42:10,214]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@3fe242eb.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472024530214.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 15:45:57,349]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 15:45:57,380]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:45:57,516]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:46:00,240]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:46:26,231]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 15:47:01,536]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.3333333333333333--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 15:47:01,540]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:47:01,541]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 15:47:03,743]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[INFO ][2016-08-24 16:01:34,982]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:01:40,418]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:01:41,691]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@619732db.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472025701691.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 16:01:53,369]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:01:58,018]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:01:58,698]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@649ab87c.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472025718697.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 16:05:40,908]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:05:45,580]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[INFO ][2016-08-24 16:10:01,308]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:10:02,337]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@2f66bcb7.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472026202337.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 16:10:20,434]--Cache Hit Ratio [com.chinatelecom.dao.mapper.LoginMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:10:20,486]--==>  Preparing: select * from OPERATOR WHERE F01=? and F02=? --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:10:20,670]--==> Parameters: guest(String), Z3Vlc3Q=
+(String)--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:10:20,763]--<==      Total: 1--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:10:25,170]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:10:25,172]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:10:25,174]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:10:27,772]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:10:41,502]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:10:56,448]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.6666666666666666--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:11:44,481]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:11:44,482]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:11:44,500]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:11:56,121]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:11:56,123]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:11:56,127]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:12:06,424]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:12:06,431]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:12:06,434]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:12:08,733]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:24:34,236]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.4--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:24:34,243]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:24:34,245]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:24:36,470]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:01,744]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:01,745]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:01,749]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:08,217]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.3333333333333333--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:25:08,219]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:08,220]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:10,355]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:21,067]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:21,070]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:21,074]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:25:29,576]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.42857142857142855--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:26:29,782]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.375--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:26:29,788]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:26:29,790]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:26:31,911]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[INFO ][2016-08-24 16:32:59,389]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:33:05,053]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:33:05,921]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@185dd8ed.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472027585920.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 16:33:07,964]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:33:07,984]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:33:08,112]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:33:10,604]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:33:19,597]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:33:19,598]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:33:19,605]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:33:25,769]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:34:19,232]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.3333333333333333--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:34:19,235]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:34:19,236]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:34:21,446]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:34:50,513]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:35:15,187]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.4--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:35:15,190]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:35:15,191]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:35:17,299]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:35:47,813]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.3333333333333333--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:35:47,815]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:35:47,817]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:35:49,893]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[INFO ][2016-08-24 16:43:29,121]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:43:34,479]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:43:35,392]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@1e8c500.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472028215392.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 16:43:46,990]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:43:51,733]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:43:52,574]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@773fb58a.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472028232574.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 16:43:54,550]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:43:54,580]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:43:54,747]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:43:57,605]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:44:04,795]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:44:24,455]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:44:24,456]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:44:24,462]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:44:32,436]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.3333333333333333--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:44:32,438]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:44:32,439]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:44:34,592]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[INFO ][2016-08-24 16:45:14,305]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:45:19,495]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:45:20,364]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@5de949c.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472028320364.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 16:46:02,103]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 16:46:06,381]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 16:46:06,991]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 16:46:07,057]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 16:46:07,148]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@53262b38.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472028367148.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 16:46:36,829]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:46:36,997]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:46:37,036]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:46:42,252]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:46:42,255]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:46:42,256]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:46:44,671]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:47:00,583]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:47:23,650]--==>  Preparing: select * from Site --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:47:23,651]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:47:23,655]--<==      Total: 3--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 16:47:28,534]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.6666666666666666--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:48:16,115]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.75--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 16:48:46,125]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.8--[getObject][LoggingCache.java,62]
+[INFO ][2016-08-24 17:03:21,337]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:03:26,633]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:03:27,220]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:03:27,288]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:03:27,406]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@13496428.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472029407406.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:03:58,863]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:04:03,620]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:04:04,208]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:04:04,293]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:04:04,401]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@7967a473.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472029444400.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:05:36,245]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:05:41,226]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:05:41,821]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:05:41,975]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:05:42,118]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@52954bf2.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472029542118.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:07:34,170]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:07:38,482]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:07:39,063]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:07:39,202]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:07:39,327]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@4154e039.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472029659327.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:07:49,949]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:07:54,411]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:07:54,955]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:07:55,026]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:07:55,182]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@27443ec4.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472029675182.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:08:05,833]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:08:10,104]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:08:10,777]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:08:10,874]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:08:10,988]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@2d62e3a0.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472029690988.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:12:33,329]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:12:38,361]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:12:39,198]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:12:39,286]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:12:39,411]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@b1de943.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472029959411.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:14:41,277]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:14:45,332]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:14:45,949]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:14:46,032]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:14:46,144]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@5a2d7671.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030086144.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:15:41,889]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:15:42,659]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:15:42,784]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:15:42,909]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@7d43e64d.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030142909.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 17:16:39,639]--Cache Hit Ratio [com.chinatelecom.dao.mapper.LoginMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:16:39,689]--==>  Preparing: select * from OPERATOR WHERE F01=? and F02=? --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:16:39,933]--==> Parameters: guest(String), Z3Vlc3Q=
+(String)--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:16:40,016]--<==      Total: 1--[debug][BaseJdbcLogger.java,139]
+[INFO ][2016-08-24 17:16:56,811]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:17:04,565]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:17:05,373]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:17:05,483]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:17:05,581]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@3ef1d27e.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030225581.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:17:17,808]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:17:23,275]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:17:24,377]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:17:24,482]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:17:24,591]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@556c5672.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030244591.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 17:17:27,254]--Cache Hit Ratio [com.chinatelecom.dao.mapper.LoginMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:17:27,277]--==>  Preparing: select * from OPERATOR WHERE F01=? and F02=? --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:17:27,420]--==> Parameters: guest(String), Z3Vlc3Q=
+(String)--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:17:27,461]--<==      Total: 1--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:17:47,990]--Cache Hit Ratio [com.chinatelecom.dao.mapper.LoginMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:17:53,700]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:17:53,702]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:17:53,703]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:17:56,029]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[INFO ][2016-08-24 17:18:46,615]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:18:51,082]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:18:51,731]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:18:51,807]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:18:51,916]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@5b519fe2.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030331916.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:24:54,481]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:24:59,472]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:25:00,154]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:25:00,254]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:25:00,367]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@1b251617.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030700367.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:25:22,124]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:25:27,466]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:25:28,070]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:25:28,147]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:25:28,259]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@7dff3b00.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030728259.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:25:50,000]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:25:55,117]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:25:55,743]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:25:55,841]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:25:55,948]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@1da7fa7.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030755947.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:26:57,674]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:27:02,168]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:27:02,784]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:27:02,860]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:27:02,980]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@65b15812.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030822980.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:28:04,882]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:28:09,969]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:28:10,537]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:28:10,617]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:28:10,722]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@3f34feb8.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030890722.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:29:12,428]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:29:16,857]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:29:17,527]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:29:17,612]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:29:17,728]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@15dae7da.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030957728.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:29:49,279]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:29:54,145]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:29:54,806]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:29:54,886]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:29:55,000]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@63390542.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472030995000.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[INFO ][2016-08-24 17:31:26,693]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:31:30,889]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[INFO ][2016-08-24 17:31:31,502]--{dataSource-1} closed--[close][DruidDataSource.java,1385]
+[INFO ][2016-08-24 17:35:34,228]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:35:35,098]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:35:35,255]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:35:35,373]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@29d88e2e.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472031335373.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 17:36:31,011]--Cache Hit Ratio [com.chinatelecom.dao.mapper.LoginMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:36:31,056]--==>  Preparing: select * from OPERATOR WHERE F01=? and F02=? --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:36:31,306]--==> Parameters: guest(String), Z3Vlc3Q=
+(String)--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:36:31,373]--<==      Total: 1--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:37:29,530]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:37:29,531]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:37:29,532]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:37:31,833]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:37:59,744]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.5--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:38:34,654]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.6666666666666666--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:39:00,203]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.75--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:39:22,885]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.8--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:42:02,292]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.8333333333333334--[getObject][LoggingCache.java,62]
+[INFO ][2016-08-24 17:43:35,039]--{dataSource-1} inited--[init][DruidDataSource.java,669]
+[WARN ][2016-08-24 17:43:35,754]--Cache: com.chinatelecom.dao.mapper.IpMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:43:35,873]--Cache: com.chinatelecom.dao.mapper.LoginMapper has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory--[initialise][Cache.java,992]
+[WARN ][2016-08-24 17:43:35,976]--Creating a new instance of CacheManager using the diskStorePath "C:\Users\ADMINI~1\AppData\Local\Temp\" which is already used by an existing CacheManager.
+The source of the configuration was net.sf.ehcache.config.generator.ConfigurationSource$InputStreamConfigurationSource@7d43e64d.
+The diskStore path for this CacheManager will be set to C:\Users\ADMINI~1\AppData\Local\Temp\\ehcache_auto_created_1472031815976.
+To avoid this warning consider using the CacheManager factory methods to create a singleton CacheManager or specifying a separate ehcache configuration (ehcache.xml) for each CacheManager instance.--[detectAndFixDiskStorePathConflict][CacheManager.java,625]
+[DEBUG][2016-08-24 17:44:35,384]--Cache Hit Ratio [com.chinatelecom.dao.mapper.LoginMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:44:35,435]--==>  Preparing: select * from OPERATOR WHERE F01=? and F02=? --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:44:35,714]--==> Parameters: guest(String), Z3Vlc3Q=
+(String)--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:44:35,784]--<==      Total: 1--[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:44:42,708]--Cache Hit Ratio [com.chinatelecom.dao.mapper.IpMapper]: 0.0--[getObject][LoggingCache.java,62]
+[DEBUG][2016-08-24 17:44:42,709]--==>  Preparing: select * from IP --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:44:42,710]--==> Parameters: --[debug][BaseJdbcLogger.java,139]
+[DEBUG][2016-08-24 17:44:45,001]--<==      Total: 13504--[debug][BaseJdbcLogger.java,139]

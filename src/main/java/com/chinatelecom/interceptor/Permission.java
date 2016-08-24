@@ -1,20 +1,20 @@
 package com.chinatelecom.interceptor;
 
-import java.util.HashMap;
+//import java.util.HashMap;
 
-import javax.servlet.RequestDispatcher;
+//import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.omg.PortableServer.REQUEST_PROCESSING_POLICY_ID;
+//import org.omg.PortableServer.REQUEST_PROCESSING_POLICY_ID;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
-import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
-import org.springframework.http.server.ServletServerHttpResponse;
-import org.springframework.web.bind.annotation.RequestMethod;
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.http.HttpStatus;
+//import org.springframework.http.MediaType;
+//import org.springframework.http.converter.json.MappingJackson2HttpMessageConverter;
+//import org.springframework.http.server.ServletServerHttpResponse;
+//import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 

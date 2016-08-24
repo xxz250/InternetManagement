@@ -19,7 +19,7 @@ import com.chinatelecom.model.ResPool;
 import com.chinatelecom.service.IpService;
 
 @Controller
-@RequestMapping("/allIpInfo")
+@RequestMapping("/ipManager")
 public class IpWebservice {
      
     @Autowired

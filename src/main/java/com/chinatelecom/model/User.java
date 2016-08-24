@@ -1,9 +1,6 @@
 package com.chinatelecom.model;
 
-import java.io.Serializable;
-
-@SuppressWarnings("serial")
-public class User implements Serializable{
+public class User /*implements Serializable*/{
 	private int ID;
 	private String LOGINNAME; 
 	private int LOGINTIMES;

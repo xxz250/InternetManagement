@@ -22,7 +22,7 @@ import com.chinatelecom.model.Vendor;
 import com.chinatelecom.service.EquipmentService;
 
 @Controller
-@RequestMapping("/allEpuipInfo")
+@RequestMapping("/equipManager")
 public class EpuipWebservice {
 
     @Autowired

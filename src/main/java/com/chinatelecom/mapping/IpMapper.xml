@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chinatelecom.dao.mapper.IpMapper">
-	<!-- 开启二级缓存 -->
-	<cache 
-		eviction="FIFO"  
-		flushInterval="60000" 
-		size="100000" 
-		readOnly="true"/> 
+	<cache type="org.mybatis.caches.ehcache.LoggingEhcache" >  
+    	<property name="timeToIdleSeconds" value="600"/>
+    	<property name="timeToLiveSeconds" value="600"/> 	
+    	<property name="maxElementsInMemory" value="10000"/>  
+    	<property name="maxElementsOnDisk" value="10000000"/>  
+    	<property name="memoryStoreEvictionPolicy" value="LRU"/>  
+	</cache>    
 	<resultMap type="com.chinatelecom.model.ResPool" id="BasePool">
 		<id property="ID" column="F00"/>
 		<result property="NAME" column="F01" />

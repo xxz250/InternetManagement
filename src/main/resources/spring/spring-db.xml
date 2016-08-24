@@ -120,4 +120,8 @@
 		<aop:advisor advice-ref="druid-stat-interceptor"
 			pointcut-ref="druid-stat-pointcut" />
 	</aop:config>
+	
+	<bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">  
+     	<property name="configLocation" value="classpath:ehcache.xml" />  
+    </bean>
 </beans>

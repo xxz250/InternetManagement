@@ -1,6 +1,8 @@
 package com.chinatelecom.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,14 +15,14 @@ import com.chinatelecom.model.User;
 import com.chinatelecom.service.LoginService;
 
 @Controller
-@RequestMapping("/loginf")
-public class Login {
+@RequestMapping("/loginManager")
+public class LoginWebservice {
 	
 	@Autowired
 	private LoginService loginService;
 	
-	@RequestMapping(value = "/logins",method=RequestMethod.POST)
-	public String islogin(HttpServletRequest request,@RequestParam(value = "name", required = false) String name
+	@RequestMapping(value = "/isLogin",method=RequestMethod.POST)
+	public String isLogin(HttpServletRequest request,@RequestParam(value = "name", required = false) String name
 			,@RequestParam(value = "passwd", required = false) String passwd){
 		User op=new User();
 		if(name!=null&&passwd!=null){
@@ -38,23 +40,14 @@ public class Login {
 		}
 		return "main";
 	}
-	/*@RequestMapping(value = "/handle",method=RequestMethod.POST)
-	public ModelAndView islogin(@RequestParam(value = "name", required = false) String name
-			,@RequestParam(value = "passwd", required = false) String passwd,HttpServletRequest request){
-		ModelAndView mav = new ModelAndView();
-		User op=new User();
-		if(name!=null&&passwd!=null){
-			op=loginService.loginUser(name, passwd);
-			if(op!=null){
-				request.getSession().setAttribute("username", op.getNAME());
-			}
-			else{
-				return new ModelAndView("login");
-			}
-		}
-		else{
-			return new ModelAndView("login");
-		}
-		return new ModelAndView("main");
-	}*/
+	@RequestMapping("/quit")
+	public void quit(HttpServletRequest request,HttpServletResponse response)throws Exception{
+		HttpSession session = request.getSession();//防止创建Session 
+        if(session == null&&request.getAttribute("username")==null){  
+            response.sendRedirect("/InternetManagement/page/login.html");
+        }            
+        session.removeAttribute("username"); 
+        session.invalidate();
+        response.sendRedirect("/InternetManagement/page/login.html");  
+	}
 }

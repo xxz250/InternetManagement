@@ -1,10 +1,8 @@
 package com.chinatelecom.model;
 
-import java.io.Serializable;
 import java.sql.Date;
 
-@SuppressWarnings("serial")
-public class Equipment implements Serializable{
+public class Equipment /*implements Serializable*/{
 	private int ID;
 	private int RACKID;
 	private String HOSTNAME;

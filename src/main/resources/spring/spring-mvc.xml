@@ -21,7 +21,7 @@
 			<mvc:exclude-mapping path="/js/**" />
 			<mvc:exclude-mapping path="/css/**" />
 			<mvc:exclude-mapping path="/page/login.html" />
-			<mvc:exclude-mapping path="/loginf/logins" />
+			<mvc:exclude-mapping path="/loginManager/isLogin" />
 			<bean class="com.chinatelecom.interceptor.Permission" />
 		</mvc:interceptor>
 	</mvc:interceptors>

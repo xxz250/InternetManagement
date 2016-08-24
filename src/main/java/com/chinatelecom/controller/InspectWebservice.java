@@ -16,7 +16,7 @@ import com.chinatelecom.constants.ReturnValue;
 import com.chinatelecom.service.InspectService;
 
 @Controller
-@RequestMapping("/allinspectinfo")
+@RequestMapping("/inspectManager")
 public class InspectWebservice {
 
     @Autowired
