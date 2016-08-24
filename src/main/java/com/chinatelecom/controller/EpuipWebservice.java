@@ -3,9 +3,12 @@ package com.chinatelecom.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -16,16 +19,16 @@ import com.chinatelecom.model.Rack;
 import com.chinatelecom.model.Room;
 import com.chinatelecom.model.Site;
 import com.chinatelecom.model.Vendor;
-import com.chinatelecom.service.equipservice;
+import com.chinatelecom.service.EquipmentService;
 
 @Controller
-@RequestMapping("/allepuipinfo")
+@RequestMapping("/allEpuipInfo")
 public class EpuipWebservice {
 
     @Autowired
-    private equipservice equip;
+    private EquipmentService equip;
 
-    @RequestMapping("/getallepuipinfo")
+    @RequestMapping("/getAllSite")
     @ResponseBody
     public Object getAllSite(){
     	List<Site> site=equip.getAllSite();
@@ -34,13 +37,17 @@ public class EpuipWebservice {
     	}
     	return site;
     }
+    @RequestMapping("/getAllRoom")
+    @ResponseBody
     public Object getAllRoom(){
     	List<Room> room=equip.getAllRoom();
     	if(room.isEmpty()){
-    		return "no information";
+    		return ReturnValue.empty;
     	}
     	return room;
     }
+    @RequestMapping("/getAllRack")
+    @ResponseBody
     public Object getAllRack(){
     	List<Rack> rack=equip.getAllRack();
     	if(rack.isEmpty()){
@@ -48,7 +55,9 @@ public class EpuipWebservice {
     	}
     	return rack;
     }
-    public Object getAllRoomBySite(
+    @RequestMapping(value="/getAllRoomBySite",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getAllRoomBySite(HttpServletRequest request,
             @RequestParam(value = "nameid", required = false) String id) {
     	List<Room> room = new ArrayList<Room>(); 
     	if(id!=""){
@@ -62,8 +71,10 @@ public class EpuipWebservice {
     		return ReturnValue.error;
     	}
     	return room;
-    } 
-    public Object getAllRackByRoom(
+    }
+    @RequestMapping(value="/getAllRackByRoom",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getAllRackByRoom(HttpServletRequest request,
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Rack> rack=new ArrayList<Rack>();
     	if(id!=""){
@@ -78,7 +89,9 @@ public class EpuipWebservice {
     	}
     	return rack;
     }
-    public Object getAllEqulpmentByRack(
+    @RequestMapping(value="/getAllEqulpmentByRack",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getAllEqulpmentByRack(HttpServletRequest request,
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Equipment> equipment=new ArrayList<Equipment>();
     	if(id!=""){
@@ -93,6 +106,8 @@ public class EpuipWebservice {
     	}
     	return equipment;	
     }
+    @RequestMapping("/getAllVendor")
+    @ResponseBody
     public Object getAllVendor(){
     	List<Vendor> vendor=new ArrayList<Vendor>();
     	vendor=equip.getAllVendor();
@@ -101,6 +116,8 @@ public class EpuipWebservice {
     	}
     	return vendor;
     }
+    @RequestMapping("/getAllEquipmentType")
+    @ResponseBody
     public Object getAllEquipmentType(){
     	List<EquipmentType> type=new ArrayList<EquipmentType>();
     	type=equip.getAllEquipmentType();
@@ -109,7 +126,9 @@ public class EpuipWebservice {
     	}
     	return type;
     }
-    public Object getAllEquipmentByVendorID(
+    @RequestMapping(value="/getAllEquipmentByVendorID",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getAllEquipmentByVendorID(HttpServletRequest request,
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Equipment> equipment=new ArrayList<Equipment>();
     	if(id!=""){
@@ -124,7 +143,9 @@ public class EpuipWebservice {
     	}
     	return equipment;
     }
-    public Object getAllEquipByEquipType(
+    @RequestMapping(value="/getAllEquipByEquipType",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getAllEquipByEquipType(HttpServletRequest request,
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Equipment> equipment=new ArrayList<Equipment>();
     	if(id!=""){
@@ -139,7 +160,9 @@ public class EpuipWebservice {
     	}
     	return equipment;
     }
-    public Object getAllRackBySiteID(
+    @RequestMapping(value="/getAllRackBySiteID",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getAllRackBySiteID(HttpServletRequest request,
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Rack> rack=new ArrayList<Rack>();
     	if(id!=""){
@@ -154,7 +177,9 @@ public class EpuipWebservice {
     	}
     	return rack;
     }
-    public Object getAllEquipBySiteID(
+    @RequestMapping(value="/getAllEquipBySiteID",method=RequestMethod.POST)
+    @ResponseBody
+    public Object getAllEquipBySiteID(HttpServletRequest request,
     		@RequestParam(value = "nameid", required = false) String id){
     	List<Equipment> equipment=new ArrayList<Equipment>();
     	if(id!=""){

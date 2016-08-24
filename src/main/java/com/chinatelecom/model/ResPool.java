@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class ResPool {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class ResPool implements Serializable{
     private int ID;
     private String NAME;
     private String ADDRESS;

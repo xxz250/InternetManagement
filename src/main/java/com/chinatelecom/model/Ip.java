@@ -1,8 +1,10 @@
 package com.chinatelecom.model;
 
+import java.io.Serializable;
 import java.sql.Date;
 
-public class Ip {
+@SuppressWarnings("serial")
+public class Ip implements Serializable{
     private int ID;
     private String IP;
     private String GATEWAY;

@@ -12,7 +12,7 @@ import com.chinatelecom.model.Site;
 import com.chinatelecom.model.Vendor;
 
 @Service
-public interface equipservice {
+public interface EquipmentService {
 	public List<Site> getAllSite();
 	public List<Room> getAllRoom();
 	public List<Rack> getAllRack();

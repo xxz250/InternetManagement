@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class Site {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Site implements Serializable{
 	private int ID;
 	private String SITENAME;
 	private String ADDRESS;

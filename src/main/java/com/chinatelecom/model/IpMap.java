@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class IpMap {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class IpMap implements Serializable{
     private int ID ;
     private int SRCID;
     private String SRCDES;

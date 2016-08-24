@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class Room {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Room implements Serializable{
 	private int ID;
 	private int SITEID;
 	private String NAME;

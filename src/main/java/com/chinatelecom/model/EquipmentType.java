@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class EquipmentType {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class EquipmentType implements Serializable{
 		private int ID;
 		private int VENDORID;
 		private int TYPE;

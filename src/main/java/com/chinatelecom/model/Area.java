@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class Area {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Area implements Serializable{
     private int ID;  
     private String NAME;
     private String TYPE;

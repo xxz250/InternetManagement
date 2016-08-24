@@ -12,9 +12,9 @@ import com.chinatelecom.model.Ip;
 import com.chinatelecom.model.IpMap;
 import com.chinatelecom.model.IpSegment;
 import com.chinatelecom.model.ResPool;
-import com.chinatelecom.service.ipservice;
+import com.chinatelecom.service.IpService;
 
-public class ipserviceimpl implements ipservice{
+public class IpServiceImpl implements IpService{
 
     @Autowired
     private ipDao ipInfo;

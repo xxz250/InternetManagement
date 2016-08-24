@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class Rack {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Rack implements Serializable{
 	private int ID;
 	private int ROOMID;
 	private String COLUMEID;

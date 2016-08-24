@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class IpSegment {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class IpSegment implements Serializable{
 	private int ID;
     private int AREAID;
     private String IP;

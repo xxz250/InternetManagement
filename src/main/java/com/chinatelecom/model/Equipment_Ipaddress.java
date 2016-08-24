@@ -1,6 +1,9 @@
 package com.chinatelecom.model;
 
-public class Equipment_Ipaddress {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Equipment_Ipaddress implements Serializable{
 	private int ID;
 	private int EQUIPMENTID;
 	private int IPADDRESSID;

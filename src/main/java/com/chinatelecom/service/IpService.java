@@ -9,7 +9,7 @@ import com.chinatelecom.model.IpMap;
 import com.chinatelecom.model.ResPool;
 
 @Service
-public interface ipservice {
+public interface IpService {
 	public List<Ip> getAllIp();
 	public List<IpMap> getAllMap();
 	public List<ResPool> getAllResPool();

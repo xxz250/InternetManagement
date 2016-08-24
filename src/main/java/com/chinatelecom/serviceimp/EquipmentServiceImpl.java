@@ -12,9 +12,9 @@ import com.chinatelecom.model.Rack;
 import com.chinatelecom.model.Room;
 import com.chinatelecom.model.Site;
 import com.chinatelecom.model.Vendor;
-import com.chinatelecom.service.equipservice;
+import com.chinatelecom.service.EquipmentService;
 
-public class equipserviceimpl implements equipservice{
+public class EquipmentServiceImpl implements EquipmentService{
 	
     @Autowired
     private equipmentDao getEquipInfo;

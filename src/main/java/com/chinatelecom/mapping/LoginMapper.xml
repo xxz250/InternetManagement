@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.chinatelecom.dao.mapper.LoginMapper">
+	<!-- 开启二级缓存 -->
+	<cache 
+		eviction="FIFO"  
+		flushInterval="60000" 
+		size="100000" 
+		readOnly="true"/> 
 	<resultMap type="com.chinatelecom.model.User" id="BaseUser">
 		<id property="ID" column="F00"/>
 		<result property="LOGINNAME" column="F01" />

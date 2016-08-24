@@ -1,7 +1,5 @@
 package com.chinatelecom.controller;
 
-import java.util.Base64;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chinatelecom.interceptor.Encryptor;
 import com.chinatelecom.model.User;
 import com.chinatelecom.service.LoginService;
 
@@ -25,7 +24,7 @@ public class Login {
 			,@RequestParam(value = "passwd", required = false) String passwd){
 		User op=new User();
 		if(name!=null&&passwd!=null){
-			passwd=Base64.getEncoder().encodeToString(passwd.getBytes());
+			passwd=Encryptor.encrypt(passwd);
 			op=loginService.loginUser(name, passwd);
 			if(op!=null){
 				request.getSession().setAttribute("username", op.getNAME());
