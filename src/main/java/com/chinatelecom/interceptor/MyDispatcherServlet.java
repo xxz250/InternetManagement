@@ -14,7 +14,7 @@ public class MyDispatcherServlet extends DispatcherServlet {
     protected ModelAndView processHandlerException(HttpServletRequest request, HttpServletResponse response,   
     Object handler, Exception ex) throws Exception {   
         if (ex instanceof HttpRequestMethodNotSupportedException) {   
-            return new ModelAndView("/page/login");   
+            return new ModelAndView("login");   
         } else {   
             return super.processHandlerException(request, response, handler, ex);   
         }   

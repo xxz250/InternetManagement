@@ -19,7 +19,7 @@
 		<id property="ID" column="F00"/>		
 		<result property="NAME" column="F01" />
 		<result property="TYPE" column="F02" />
-		<result property="PESPOOLID" column="F03" />
+		<result property="RESPOOLID" column="F03" />
 		<result property="RARENTAREAID" column="F04" />
 		<result property="USEFOR" column="F05" />	
 		<result property="COMMENTS" column="F06" />
@@ -29,7 +29,7 @@
 		<result property="AREAID" column="F01" />
 		<result property="IP" column="F02" />
 		<result property="MASK" column="F03" />
-		<result property="VALN" column="F04" />
+		<result property="VLAN" column="F04" />
 		<result property="TYPE" column="F05" />
 		<result property="PARENTIPSEGMENT" column="F06" />
 		<result property="USEFOR" column="F07" />

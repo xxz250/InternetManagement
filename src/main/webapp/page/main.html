@@ -9,7 +9,78 @@
        <h3>欢迎登录本系统！</h3>
    </div>
    <div>
+   		<a href="/InternetManagement/ipManager/getAllIp">ip信息</a>
+   		<a href="/InternetManagement/ipManager/getAllMap">ip映射</a>
+   		<a href="/InternetManagement/ipManager/getAllResPool">资源池</a>
+   		<a href="/InternetManagement/equipManager/getAllSite">局址</a>
+   		<a href="/InternetManagement/equipManager/getAllRoom">机房</a>
+   		<a href="/InternetManagement/equipManager/getAllRack">机柜</a>
+   		<a href="/InternetManagement/equipManager/getAllVendor">厂商</a>
+   		<a href="/InternetManagement/equipManager/getAllEquipmentType">设备类型</a>
    		<a href="/InternetManagement/loginManager/quit">退出登录</a>
+   	</div>
+   	<div>
+   		<form action="/InternetManagement/ipManager/getIpMapByMapID" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="映射id查映射" class="button"/>
+   			</div>
+   		</form> 		
+   		<form action="/InternetManagement/ipManager/getIpByEquipID" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="设备id查ip" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/ipManager/IsOccupyOfIp" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="text" name="ipid"/>
+   				<input type="submit" name="submit" value="ip占用资源池id,IP地址" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/equipManager/getAllRoomBySite" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="局址id查机房" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/equipManager/getAllRackByRoom" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="机房id查机架" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/equipManager/getAllEqulpmentByRack" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="机架id查设备" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/equipManager/getAllEquipmentByVendorID" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="厂商id查设备" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/equipManager/getAllEquipByEquipType" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="设备类型id查设备" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/equipManager/getAllRackBySiteID" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="局址id查机架" class="button"/>
+   			</div>
+   		</form>
+   		<form action="/InternetManagement/equipManager/getAllEquipBySiteID" method="post">
+   			<div>
+   				<input type="text" name="nameid"/>
+   				<input type="submit" name="submit" value="局址id查设备" class="button"/>
+   			</div>
+   		</form>
    </div>
 </body>
 </html>
