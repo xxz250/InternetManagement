@@ -7,8 +7,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 //import org.omg.PortableServer.REQUEST_PROCESSING_POLICY_ID;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+/*import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;*/
 //import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.http.HttpStatus;
 //import org.springframework.http.MediaType;
@@ -22,7 +22,7 @@ public class Permission implements HandlerInterceptor {
     /**
      * Logger for this class
      */
-    private static final Logger LOG = LoggerFactory.getLogger(Permission.class);
+ //   private static final Logger LOG = LoggerFactory.getLogger(Permission.class);
 
 /*    @Autowired
     private MappingJackson2HttpMessageConverter converter;*/

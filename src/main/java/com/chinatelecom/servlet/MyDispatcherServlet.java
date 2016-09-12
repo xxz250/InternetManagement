@@ -1,4 +1,4 @@
-package com.chinatelecom.interceptor;   
+package com.chinatelecom.servlet;   
 
 import javax.servlet.http.HttpServletRequest;   
 import javax.servlet.http.HttpServletResponse;   

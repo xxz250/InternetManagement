@@ -1,4 +1,4 @@
-package com.chinatelecom.interceptor;
+package com.chinatelecom.utils;
 
 public class Encryptor {
 	

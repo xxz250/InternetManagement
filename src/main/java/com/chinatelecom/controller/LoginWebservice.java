@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.chinatelecom.interceptor.Encryptor;
 import com.chinatelecom.model.User;
 import com.chinatelecom.service.LoginService;
+import com.chinatelecom.utils.Encryptor;
 
 @Controller
 @RequestMapping("/loginManager")
@@ -28,7 +28,7 @@ public class LoginWebservice {
 			,@RequestParam(value = "passwd", required = false) String passwd){
 		User op=new User();
 		if(name!=null&&passwd!=null){
-			passwd=Encryptor.encrypt(passwd);
+			//passwd=Encryptor.encrypt(passwd);
 			op=loginService.loginUser(name, passwd);
 			if(op!=null){
 				request.getSession().setAttribute("username", op.getNAME());
@@ -40,8 +40,6 @@ public class LoginWebservice {
 		else{
 			return "login";
 		}
-/*		System.out.println("username"+request.getSession().getId());
-		System.out.println("username"+request.getSession().getAttribute("username"));	*/	
 		return "main";
 	}
 	@RequestMapping("/quit")
@@ -62,13 +60,4 @@ public class LoginWebservice {
 			}
 		}
 	}	
-	/*@RequestMapping("/session")
-	public void session(HttpServletRequest request,HttpServletResponse response){
-		java.util.Enumeration e = request.getSession().getAttributeNames();
-		while( e.hasMoreElements()) {
-			String sessionName=(String)e.nextElement();
-			logger.debug("\nsession item name="+sessionName);
-			logger.debug("\nsession item value="+request.getSession().getAttribute(sessionName));
-		}
-	}*/
 }
