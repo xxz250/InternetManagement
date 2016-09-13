@@ -3,8 +3,6 @@ package com.chinatelecom.serviceimp;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.PrintWriter;
 import java.net.Socket;
 
 public class SocketServiceImpl implements Runnable {
@@ -30,7 +28,7 @@ public class SocketServiceImpl implements Runnable {
 			functionNum = Integer.parseInt(info[0]);
 			switch (functionNum) {
 			case 1:
-				function.isLogin(info[1],info[2]);
+				function.isLogin(info[0],info[1],info[2]);
 				break;
 			case 2:
 				function.quit();
@@ -86,7 +84,7 @@ public class SocketServiceImpl implements Runnable {
 			case 19:
 				function.getIpMapByMapID(info[1]);
 			case 20:
-				function.IsOccupyOfIp(info[1],info[2]);
+				function.IsOccupyOfIp(info[0],info[1],info[2]);
 				break;
 			default:
 				break;

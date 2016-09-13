@@ -41,6 +41,7 @@ public class HttpService {
         	if(row==7){
         		buffer.append(str.toString());  
                 row++;
+                break;
         	} 
         	else row++;
         }    
@@ -50,10 +51,11 @@ public class HttpService {
 		return buffer.toString(); 
 	}
 	
-	public void sendPost(String url) throws IOException
+	public String sendPost(String url,String num,String nameid,String param) throws IOException
 	{
-		String data = URLEncoder.encode("name", "utf-8") + "=" + URLEncoder.encode("gloomyfish", "utf-8") + "&" +
-						URLEncoder.encode("age", "utf-8") + "=" + URLEncoder.encode("32", "utf-8");
+		StringBuffer buffer = new StringBuffer();
+		String data = URLEncoder.encode("nameid", "utf-8") + "=" + URLEncoder.encode(nameid, "utf-8") + "&" +
+						URLEncoder.encode("param", "utf-8") + "=" + URLEncoder.encode(param, "utf-8");
 		SocketAddress dest = new InetSocketAddress(this.host, this.port);
 		socket.connect(dest);
 		OutputStreamWriter streamWriter = new OutputStreamWriter(socket.getOutputStream(), "utf-8");
@@ -65,8 +67,58 @@ public class HttpService {
 		bufferedWriter.write("\r\n");
 		bufferedWriter.write(data);
 		bufferedWriter.flush();
+		if(num.equals("1")){
+			buffer.append("login successfully!");
+		}
+		else{
+			InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream(), "utf-8");    
+	        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);    
+	        String str = null; 
+	        int row=0;
+	        while ((str = bufferedReader.readLine()) != null) { 
+	        	if(row==7){
+	        		buffer.append(str.toString());  
+	                row++;
+	        	} 
+	        	else row++;
+	        } 
+	        bufferedReader.close();    
+	        inputStreamReader.close();
+		}
+		socket.close();	
+		return buffer.toString();
+	}
+	
+	public String sendPost(String url,String nameid) throws IOException
+	{
+		StringBuffer buffer = new StringBuffer();
+		String data = URLEncoder.encode("nameid", "utf-8") + "=" + URLEncoder.encode(nameid, "utf-8");
+		SocketAddress dest = new InetSocketAddress(this.host, this.port);
+		socket.connect(dest);
+		OutputStreamWriter streamWriter = new OutputStreamWriter(socket.getOutputStream(), "utf-8");
+		bufferedWriter = new BufferedWriter(streamWriter);		
+		bufferedWriter.write("POST " + url + " HTTP/1.1\r\n");
+		bufferedWriter.write("Host: " + this.host + "\r\n");
+		bufferedWriter.write("Content-Length: " + data.length() + "\r\n");
+		bufferedWriter.write("Content-Type: application/x-www-form-urlencoded\r\n");
 		bufferedWriter.write("\r\n");
+		bufferedWriter.write(data);
 		bufferedWriter.flush();
-		socket.close();
+		InputStreamReader inputStreamReader = new InputStreamReader(socket.getInputStream(), "utf-8");    
+        BufferedReader bufferedReader = new BufferedReader(inputStreamReader);    
+        String str = null; 
+        int row=0;
+        while ((str = bufferedReader.readLine()) != null) { 
+        	if(row==7){
+        		buffer.append(str.toString());  
+                row++;
+                break;
+        	} 
+        	else row++;
+        } 
+        bufferedReader.close();    
+        inputStreamReader.close(); 
+		socket.close();	
+		return buffer.toString();
 	}
 }

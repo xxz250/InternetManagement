@@ -90,7 +90,7 @@ public class IpWebservice {
     @ResponseBody
 	public Object IsOccupyOfIp(HttpServletRequest request,
 			@RequestParam(value = "nameid",required = false) String id,
-			@RequestParam(value = "ipid",required = false) String ipaddr){
+			@RequestParam(value = "param",required = false) String ipaddr){
 		if(id!=""&&ipaddr!=""){
 			int ID=Integer.parseInt(id);
 			List<Ip> ipList=ip.getAllIpByResPool(ID);

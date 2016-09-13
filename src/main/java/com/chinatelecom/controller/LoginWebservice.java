@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.chinatelecom.constants.ReturnValue;
 import com.chinatelecom.model.User;
 import com.chinatelecom.service.LoginService;
 import com.chinatelecom.utils.Encryptor;
@@ -24,8 +25,8 @@ public class LoginWebservice {
 	private LoginService loginService;
 	
 	@RequestMapping(value = "/isLogin",method=RequestMethod.POST)
-	public String isLogin(HttpServletRequest request,@RequestParam(value = "name", required = false) String name
-			,@RequestParam(value = "passwd", required = false) String passwd){
+	public Object isLogin(HttpServletRequest request,@RequestParam(value = "nameid", required = false) String name
+			,@RequestParam(value = "param", required = false) String passwd){
 		User op=new User();
 		if(name!=null&&passwd!=null){
 			//passwd=Encryptor.encrypt(passwd);
@@ -35,12 +36,15 @@ public class LoginWebservice {
 			}
 			else{
 				return "login";
+				//return ReturnValue.empty;
 			}
 		}
 		else{
 			return "login";
+			//return ReturnValue.error;
 		}
 		return "main";
+		//return ReturnValue.succed;
 	}
 	@RequestMapping("/quit")
 	public void quit(HttpServletRequest request,HttpServletResponse response){

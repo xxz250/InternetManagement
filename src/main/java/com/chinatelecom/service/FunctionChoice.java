@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface FunctionChoice {
-	public void isLogin(String name,String passwd);
+	public void isLogin(String num,String name,String passwd);
 	public void quit();
 	public void getAllSite();
 	public void getAllRoom();
@@ -23,5 +23,5 @@ public interface FunctionChoice {
 	public void getAllResPool();
 	public void getIpByEquipID(String id);
 	public void getIpMapByMapID(String id);
-	public void IsOccupyOfIp(String id,String ipaddr); 
+	public void IsOccupyOfIp(String num,String id,String ipaddr); 
 }
